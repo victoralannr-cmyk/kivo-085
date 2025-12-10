@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -68,8 +68,9 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center space-x-2">
-          <Button className="hidden md:inline-flex">
-            Agendar
+          <Button className="hidden md:inline-flex bg-gradient-to-r from-cyan-500 to-green-500 text-white hover:from-cyan-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
+            WhatsApp
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
             variant="ghost"
@@ -95,7 +96,10 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button className="w-full">Agendar</Button>
+            <Button className="w-full bg-gradient-to-r from-cyan-500 to-green-500 text-white">
+              WhatsApp
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       )}

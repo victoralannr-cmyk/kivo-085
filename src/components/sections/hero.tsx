@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -25,7 +26,8 @@ const HeroSection = () => {
         </p>
         <div className="mt-10">
           <Button size="lg" className="w-[293px] h-[43px] bg-gradient-to-r from-[#19233A] via-[#AEB7C4] to-[#19233A] bg-[length:200%_auto] text-primary-foreground animate-pulse-glow hover:animate-none hover:scale-105 transition-all duration-300">
-            Agendar
+            WhatsApp
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
