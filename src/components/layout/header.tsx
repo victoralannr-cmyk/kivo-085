@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -17,6 +18,7 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,11 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const normalLogo = "https://i.postimg.cc/MpwpmLSX/Captura-de-tela-2025-12-10-175124-removebg-preview.png";
+  const scrolledLogo = "https://i.postimg.cc/QxKrKJ9z/Captura-de-tela-2025-11-30-224857-removebg-preview.png";
+
+  const logoSrc = isMobile && isScrolled ? scrolledLogo : normalLogo;
+
   return (
     <header
       className={cn(
@@ -36,16 +43,17 @@ const Header = () => {
     >
       <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300 border",
         isScrolled 
-          ? 'bg-background/60 backdrop-blur-xl shadow-lg border-white/10' 
+          ? 'bg-background/80 backdrop-blur-xl shadow-lg border-white/10' 
           : 'bg-background/20 backdrop-blur-lg border-white/5'
       )}>
         <Link href="#home" className="flex items-center space-x-2">
           <Image 
-            src="https://i.postimg.cc/MpwpmLSX/Captura-de-tela-2025-12-10-175124-removebg-preview.png"
+            src={logoSrc}
             alt="Kivo Logo"
-            width={100}
+            width={isMobile && isScrolled ? 40 : 100}
             height={40}
-            className="h-10 w-auto"
+            className="h-10 w-auto transition-all duration-300"
+            key={logoSrc}
           />
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
