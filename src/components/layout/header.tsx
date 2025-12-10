@@ -31,11 +31,12 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-transparent',
+        'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out w-full max-w-6xl',
       )}
     >
-      <div className="container flex h-20 items-center justify-between">
+      <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300",
+        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-background/30 backdrop-blur-md'
+      )}>
         <Link href="#home" className="flex items-center space-x-2">
           <Image 
             src="https://i.postimg.cc/MpwpmLSX/Captura-de-tela-2025-12-10-175124-removebg-preview.png"
@@ -58,7 +59,7 @@ const Header = () => {
         </nav>
         <div className="flex items-center space-x-2">
           <Button>
-            Agendar uma demonstração
+            Agendar
           </Button>
           <Button
             variant="ghost"
@@ -72,7 +73,7 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background/95">
+        <div className="md:hidden bg-background/95 mt-2 rounded-lg">
           <div className="container flex flex-col items-start space-y-4 py-4 pt-0">
             {navLinks.map((link) => (
               <Link
@@ -84,7 +85,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button className="w-full">Agendar uma demonstração</Button>
+            <Button className="w-full">Agendar</Button>
           </div>
         </div>
       )}
