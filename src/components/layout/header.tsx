@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#servicos', label: 'Serviços' },
+  { href: '#contato', label: 'Contato' },
   { href: '#faq', label: 'FAQ' },
 ];
 
@@ -35,43 +36,32 @@ const Header = () => {
         isScrolled ? 'border-b border-white/10 shadow-lg' : ''
       )}
     >
-      <div
-        className={cn(
-          'container flex h-16 items-center transition-all duration-300 ease-in-out'
-        )}
-      >
-        <div className="mr-4 flex items-center">
-          <Link href="#home" className="mr-6 flex items-center space-x-2">
-            <KivoLogo />
-            <span
-              className={cn(
-                'font-bold sm:inline-block font-headline'
-              )}
-            >
-              Kivo
-            </span>
-          </Link>
-        </div>
-        <nav
-          className={cn(
-            'hidden md:flex items-center space-x-6 text-sm font-medium'
-          )}
-        >
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="#home" className="flex items-center space-x-2">
+          <KivoLogo />
+          <span className="font-bold sm:inline-block font-headline">Kivo</span>
+        </Link>
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground/80 text-foreground/60">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition-colors hover:text-primary text-foreground/80"
+            >
               {link.label}
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button
-            className={cn(
-              'hidden md:inline-flex'
-            )}
-          >
-            Agendar
+        <div className="flex items-center space-x-2">
+          <Button className="hidden md:inline-flex">
+            Fale com um especialista
           </Button>
-          <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleMenu}
+            className="md:hidden"
+          >
             {isMenuOpen ? <X /> : <Menu />}
             <span className="sr-only">Toggle Menu</span>
           </Button>
@@ -90,7 +80,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button className="w-full">Agendar</Button>
+            <Button className="w-full">Fale com um especialista</Button>
           </div>
         </div>
       )}
