@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import KivoLogo from '@/components/kivo-logo';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -31,16 +31,19 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out',
-        'bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60',
-        'border border-white/10 shadow-lg',
-        'w-[95%] max-w-6xl rounded-full'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-transparent',
       )}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         <Link href="#home" className="flex items-center space-x-2">
-          <KivoLogo />
-          <span className="font-bold sm:inline-block font-headline">Kivo</span>
+          <Image 
+            src="https://i.postimg.cc/MpwpmLSX/Captura-de-tela-2025-12-10-175124-removebg-preview.png"
+            alt="Kivo Logo"
+            width={100}
+            height={40}
+            className="h-10 w-auto"
+          />
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
@@ -55,7 +58,7 @@ const Header = () => {
         </nav>
         <div className="flex items-center space-x-2">
           <Button>
-            Fale com um especialista
+            Agendar uma demonstração
           </Button>
           <Button
             variant="ghost"
@@ -69,7 +72,7 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-background/95">
           <div className="container flex flex-col items-start space-y-4 py-4 pt-0">
             {navLinks.map((link) => (
               <Link
@@ -81,7 +84,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Button className="w-full">Fale com um especialista</Button>
+            <Button className="w-full">Agendar uma demonstração</Button>
           </div>
         </div>
       )}
