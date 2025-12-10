@@ -34,8 +34,10 @@ const Header = () => {
         'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out w-full max-w-6xl',
       )}
     >
-      <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300",
-        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-md' : 'bg-background/30 backdrop-blur-md'
+      <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300 border",
+        isScrolled 
+          ? 'bg-background/60 backdrop-blur-xl shadow-lg border-white/10' 
+          : 'bg-background/20 backdrop-blur-lg border-white/5'
       )}>
         <Link href="#home" className="flex items-center space-x-2">
           <Image 
@@ -73,7 +75,7 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background/95 mt-2 rounded-lg">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl mt-2 rounded-lg border border-white/10">
           <div className="container flex flex-col items-start space-y-4 py-4 pt-0">
             {navLinks.map((link) => (
               <Link
