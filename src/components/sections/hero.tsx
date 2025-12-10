@@ -19,13 +19,13 @@ const HeroSection = () => {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
           e mantemos você dominante, relevante e sempre{' '}
-          <span className="animate-gradient-flow bg-gradient-to-r from-accent via-slate-400 to-accent bg-[length:200%_auto] bg-clip-text font-semibold text-transparent">
+          <span className="animate-gradient-flow bg-gradient-to-r from-primary via-slate-400 to-primary bg-[length:200%_auto] bg-clip-text font-semibold text-transparent">
             acima da concorrência.
           </span>
         </p>
         <div className="mt-10">
           <Button size="lg">
-            Agendar uma demonstração
+            Agendar
           </Button>
         </div>
       </div>
