@@ -31,12 +31,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+        'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out',
         'bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60',
-        isScrolled ? 'border-b border-white/10 shadow-lg' : ''
+        'border border-white/10 shadow-lg',
+        'w-[95%] max-w-6xl rounded-full'
       )}
     >
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between">
         <Link href="#home" className="flex items-center space-x-2">
           <KivoLogo />
           <span className="font-bold sm:inline-block font-headline">Kivo</span>
@@ -53,7 +54,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center space-x-2">
-          <Button className="hidden md:inline-flex">
+          <Button>
             Fale com um especialista
           </Button>
           <Button
