@@ -24,7 +24,7 @@ const HeroSection = () => {
           </span>
         </p>
         <div className="mt-10">
-          <Button size="lg">
+          <Button size="lg" className="bg-gradient-to-r from-primary via-slate-400 to-primary bg-[length:200%_auto] text-primary-foreground animate-pulse-glow hover:animate-none hover:scale-105 transition-all duration-300">
             Agendar
           </Button>
         </div>
