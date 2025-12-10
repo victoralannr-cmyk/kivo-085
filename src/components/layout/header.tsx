@@ -34,7 +34,7 @@ const Header = () => {
         'bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60',
         'border border-white/10 shadow-lg',
         isScrolled || isMenuOpen
-          ? 'w-[95vw] max-w-4xl rounded-2xl'
+          ? 'w-[95vw] rounded-2xl'
           : 'w-auto rounded-full'
       )}
     >
