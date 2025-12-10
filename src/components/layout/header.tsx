@@ -30,18 +30,14 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-4 left-1/2 z-50 -translate-x-1/2 transition-all duration-300 ease-in-out',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
         'bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60',
-        'border border-white/10 shadow-lg',
-        isScrolled || isMenuOpen
-          ? 'w-[95vw] rounded-2xl'
-          : 'w-auto rounded-full'
+        isScrolled ? 'border-b border-white/10 shadow-lg' : ''
       )}
     >
       <div
         className={cn(
-          'flex h-14 items-center transition-all duration-300 ease-in-out',
-          isScrolled || isMenuOpen ? 'px-4' : 'px-4'
+          'container flex h-16 items-center transition-all duration-300 ease-in-out'
         )}
       >
         <div className="mr-4 flex items-center">
@@ -49,8 +45,7 @@ const Header = () => {
             <KivoLogo />
             <span
               className={cn(
-                'font-bold sm:inline-block font-headline transition-opacity duration-300',
-                isScrolled || isMenuOpen ? 'opacity-100' : 'sm:opacity-0'
+                'font-bold sm:inline-block font-headline'
               )}
             >
               Kivo
@@ -59,14 +54,11 @@ const Header = () => {
         </div>
         <nav
           className={cn(
-            'items-center space-x-6 text-sm font-medium transition-all duration-300 ease-in-out md:flex',
-            isScrolled || isMenuOpen
-              ? 'visible opacity-100'
-              : 'invisible w-0 opacity-0'
+            'hidden md:flex items-center space-x-6 text-sm font-medium'
           )}
         >
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hidden lg:block transition-colors hover:text-foreground/80 text-foreground/60">
+            <Link key={link.href} href={link.href} className="transition-colors hover:text-foreground/80 text-foreground/60">
               {link.label}
             </Link>
           ))}
@@ -74,15 +66,12 @@ const Header = () => {
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button
             className={cn(
-              'hidden md:inline-flex transition-all duration-300',
-              isScrolled || isMenuOpen
-                ? 'visible opacity-100'
-                : 'invisible w-0 p-0 opacity-0'
+              'hidden md:inline-flex'
             )}
           >
             Agendar
           </Button>
-          <Button variant="ghost" size="icon" onClick={toggleMenu}>
+          <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden">
             {isMenuOpen ? <X /> : <Menu />}
             <span className="sr-only">Toggle Menu</span>
           </Button>
