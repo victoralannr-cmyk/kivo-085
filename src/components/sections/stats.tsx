@@ -1,7 +1,9 @@
+import AnimatedCounter from "@/components/ui/animated-counter";
+
 const stats = [
-    { value: '+50', label: 'Projetos Executados' },
-    { value: '+200', label: 'Estratégias de Crescimento' },
-    { value: '+100', label: 'Marcas Elevadas' },
+    { value: 50, label: 'Projetos Executados', prefix: '+' },
+    { value: 200, label: 'Estratégias de Crescimento', prefix: '+' },
+    { value: 100, label: 'Marcas Elevadas', prefix: '+' },
 ];
 
 const StatsSection = () => {
@@ -11,7 +13,10 @@ const StatsSection = () => {
                 <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
                     {stats.map((stat) => (
                         <div key={stat.label} className="flex flex-col items-center">
-                            <p className="font-headline text-5xl font-bold text-primary">{stat.value}</p>
+                            <div className="font-headline text-5xl font-bold text-primary flex">
+                              <span>{stat.prefix}</span>
+                              <AnimatedCounter to={stat.value} />
+                            </div>
                             <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
                         </div>
                     ))}
