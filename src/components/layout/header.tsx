@@ -68,7 +68,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center space-x-2">
-          <Button>
+          <Button className="hidden md:inline-flex">
             Agendar
           </Button>
           <Button
