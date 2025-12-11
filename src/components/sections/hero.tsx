@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -27,7 +26,6 @@ const HeroSection = () => {
         <div className="mt-10">
           <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white animate-pulse-glow hover:brightness-110 transition-all duration-300">
             Agendar uma Demonstração
-            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
