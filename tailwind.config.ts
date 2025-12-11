@@ -108,7 +108,7 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-flow': 'gradient-flow 6s ease infinite',
-        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 6s ease-in-out infinite',
       },
     },
   },
