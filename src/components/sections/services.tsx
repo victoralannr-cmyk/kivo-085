@@ -11,7 +11,7 @@ const services = [
   {
     icon: <MousePointerClick className="h-10 w-10 text-primary" />,
     title: "Tráfego Pago",
-    description: "Desenvolvemos campanhas estratégicas no Google e Meta Ads para atrair clientes qualificados e gerar resultados imediatos.",
+    description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
     icon: <Code2 className="h-10 w-10 text-primary" />,
