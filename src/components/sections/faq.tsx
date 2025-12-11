@@ -4,9 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown } from "lucide-react";
 
 const faqItems = [
   {
@@ -64,8 +62,14 @@ const FaqSection = () => {
           </div>
 
           <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
+            Tráfego{' '}
             <span className="text-wavy-gradient">
-              Tráfego colocam o seu negócio à frente dos olhares certos. O seu posicionamento é a sua vitrine digital!
+              colocam o seu negócio à frente dos
+            </span>{' '}
+            olhares certos.{' '}
+            O seu posicionamento{' '}
+            <span className="text-wavy-gradient">
+              é a sua vitrine digital!
             </span>
           </p>
           
