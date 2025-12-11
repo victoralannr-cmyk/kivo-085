@@ -25,7 +25,7 @@ const faqItems = [
   {
     question: "4. Como posso saber qual é o plano ideal para minha empresa?",
     answer:
-      "Nossa equipe está disponível para realizar uma consultoria personalizada e entender as necessidades da sua empresa. A partir daí, sugerimos o plano mais adequado — seja para crescimento rápido, posicionamento estratégico ou desenvolvimento digital contínuo.",
+      "Nossa equipe está disponível para realizar uma consultoria personalizada e entender as necessidades da sua empresa. A partir daí, sugerimos o plano mais adequado seja para crescimento rápido, posicionamento estratégico ou desenvolvimento digital contínuo.",
   },
   {
     question: "5. Como faço para começar a trabalhar com a Kivo?",
