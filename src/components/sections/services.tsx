@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Code2, Video, ArrowDown } from "lucide-react";
+import { Users, DollarSign, Video, ArrowDown } from "lucide-react";
 
 const services = [
   {
@@ -13,7 +13,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <Code2 className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
+    icon: <Video className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
@@ -26,20 +26,20 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-24 sm:py-32 bg-background">
+    <section id="servicos" className="py-24 sm:py-32">
       <div className="container">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">Estratégias de Vendas</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
-          <div className="flex justify-center mt-8 mb-12">
+          <div className="flex justify-center my-8">
             <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
           </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col bg-card/80 border-border/60 hover:border-primary/50 hover:bg-card transition-all duration-300 transform hover:-translate-y-1">
+            <Card key={service.title} className="flex flex-col bg-card/30 border-border/60 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader className="items-center text-center">
                 {service.icon}
                 <CardTitle className="mt-4">{service.title}</CardTitle>
