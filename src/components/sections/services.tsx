@@ -1,56 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, DollarSign, Code, Video } from "lucide-react";
 
-const MetallicIcon = ({ children, id }: { children: React.ReactNode; id: string }) => (
-  <span className="relative h-10 w-10">
-    <svg width="0" height="0" className="absolute">
-      <defs>
-        <linearGradient id={id} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: 'hsl(210, 14%, 89%)', stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: 'hsl(215, 14%, 50%)', stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: 'hsl(210, 14%, 83%)', stopOpacity: 1 }} />
-        </linearGradient>
-      </defs>
-    </svg>
-    <div className="h-10 w-10" style={{ stroke: `url(#${id})` }}>
-      {children}
-    </div>
-  </span>
-);
-
 const services = [
   {
     icon: (
-      <MetallicIcon id="social-icon-gradient">
-        <Users className="h-10 w-10 animate-float" style={{ animationDelay: '0s' }} />
-      </MetallicIcon>
+        <Users className="h-10 w-10 animate-float" style={{ animationDelay: '0s', color: '#19233A' }} />
     ),
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
     icon: (
-      <MetallicIcon id="traffic-icon-gradient">
-        <DollarSign className="h-10 w-10 animate-spin-3d" style={{ animationDelay: '0.2s' }} />
-      </MetallicIcon>
+        <DollarSign className="h-10 w-10 animate-spin-3d" style={{ animationDelay: '0.2s', color: '#19233A' }} />
     ),
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
     icon: (
-      <MetallicIcon id="sites-icon-gradient">
-        <Code className="h-10 w-10 animate-float" style={{ animationDelay: '0.4s' }} />
-      </MetallicIcon>
+        <Code className="h-10 w-10 animate-float" style={{ animationDelay: '0.4s', color: '#19233A' }} />
     ),
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
     icon: (
-      <MetallicIcon id="creative-icon-gradient">
-        <Video className="h-10 w-10 animate-camera-flash" style={{ animationDelay: '0.6s' }} />
-      </MetallicIcon>
+        <Video className="h-10 w-10 animate-camera-flash" style={{ animationDelay: '0.6s', color: '#19233A' }} />
     ),
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
