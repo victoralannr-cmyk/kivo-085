@@ -15,7 +15,7 @@ const CustomClapperboardIcon = () => (
     strokeLinejoin="round" 
     className="h-10 w-10 text-primary"
   >
-    <g className="animate-clapper-board origin-bottom-left">
+    <g className="animate-clapper-board" style={{ transformOrigin: '3.8px 6px' }}>
       <path d="M20.2 6 3.8 6" />
       <path d="M6.8 12 3.8 6" />
     </g>
