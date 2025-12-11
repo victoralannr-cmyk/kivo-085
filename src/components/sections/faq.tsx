@@ -75,7 +75,7 @@ const FaqSection = () => {
           </p>
 
           <div className="flex flex-col items-center gap-4 my-8">
-            <ArrowDown className="h-16 w-16 text-primary animate-bounce" />
+            <ArrowDown className="h-16 w-16 text-white animate-bounce" />
             <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
               <p className="font-semibold text-foreground">Estratégias de Vendas</p>
             </div>
