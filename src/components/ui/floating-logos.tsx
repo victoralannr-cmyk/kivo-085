@@ -5,16 +5,27 @@ import { useMemo } from 'react';
 
 const FloatingLogos = () => {
   const logos = useMemo(() => {
-    return Array.from({ length: 15 }).map((_, i) => ({
-      id: i,
-      src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
-      // Adjust positioning to cover a wider area, even outside the initial viewport
-      top: `${Math.random() * 120 - 10}%`, // from -10% to 110%
-      left: `${Math.random() * 120 - 10}%`,// from -10% to 110%
-      animationDuration: `${Math.random() * 8 + 7}s`, // 7s to 15s for slower, more graceful movement
-      animationDelay: `${Math.random() * 8}s`,
-      size: Math.random() * 40 + 40, // random size between 40 and 80px
-    }));
+    const numLogos = 15;
+    return Array.from({ length: numLogos }).map((_, i) => {
+      // Create a more structured distribution
+      const angle = (i / numLogos) * 2 * Math.PI;
+      const radius = (Math.random() * 0.4 + 0.1) * 100; // 10% to 50% from center
+      
+      // Convert polar coordinates to cartesian, centered at (50, 50)
+      // and allow them to go slightly off-screen
+      const left = 50 + radius * Math.cos(angle) + (Math.random() - 0.5) * 30;
+      const top = 50 + radius * Math.sin(angle) * 2 + (Math.random() - 0.5) * 30; // Stretch vertically
+
+      return {
+        id: i,
+        src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
+        top: `${top}%`,
+        left: `${left}%`,
+        animationDuration: `${Math.random() * 8 + 7}s`,
+        animationDelay: `${Math.random() * 8}s`,
+        size: Math.random() * 40 + 40,
+      };
+    });
   }, []);
 
   return (
@@ -32,6 +43,7 @@ const FloatingLogos = () => {
             left: logo.left,
             animationDuration: logo.animationDuration,
             animationDelay: logo.animationDelay,
+            transform: 'translate(-50%, -50%)', // Center the image on its coordinates
           }}
         />
       ))}
