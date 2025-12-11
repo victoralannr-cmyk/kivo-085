@@ -47,20 +47,20 @@ const Header = () => {
           : 'bg-transparent backdrop-blur-lg border-white/5'
       )}>
         <Link href="#home" className="flex items-center justify-center flex-1 md:flex-none">
-          <div className="relative h-10 transition-all duration-500 ease-in-out" style={{ width: showScrolledLogo ? 40 : 100 }}>
+          <div className="relative h-10 transition-all duration-300 ease-in-out" style={{ width: showScrolledLogo ? 40 : 100 }}>
             <Image 
               src={normalLogo}
               alt="Kivo Logo"
               fill
               sizes="100px"
-              className={cn("object-contain transition-opacity duration-500 ease-in-out", showScrolledLogo ? 'opacity-0' : 'opacity-100')}
+              className={cn("object-contain transition-opacity duration-300 ease-in-out", showScrolledLogo ? 'opacity-0' : 'opacity-100')}
             />
             <Image 
               src={scrolledLogo}
               alt="Kivo Logo Scrolled"
               fill
               sizes="40px"
-              className={cn("object-contain transition-opacity duration-500 ease-in-out", showScrolledLogo ? 'opacity-100' : 'opacity-0')}
+              className={cn("object-contain transition-opacity duration-300 ease-in-out", showScrolledLogo ? 'opacity-100' : 'opacity-0')}
             />
           </div>
         </Link>
