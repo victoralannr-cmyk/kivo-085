@@ -72,7 +72,7 @@
   }
 
   .text-wavy-gradient {
-    @apply bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
+    @apply bg-gradient-to-r from-blue-900 via-black to-blue-900 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
   }
 
   .btn-shine {
@@ -98,9 +98,9 @@
 }
 
 @keyframes gradient-flow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 @keyframes shine-effect {
