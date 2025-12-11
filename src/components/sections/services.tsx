@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Megaphone, MousePointerClick, Code2, Clapperboard, CheckCircle } from "lucide-react";
+import { Megaphone, MousePointerClick, Code2, Clapperboard, CheckCircle, ArrowDown } from "lucide-react";
 
 const services = [
   {
@@ -39,6 +39,9 @@ const ServicesSection = () => {
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
+          <div className="mt-8 flex justify-center">
+            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
+          </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
