@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown, Users, Code2 } from "lucide-react";
+import { ArrowDown, Users, Code2, Video } from "lucide-react";
 
 const faqItems = [
   {
@@ -99,6 +99,22 @@ const FaqSection = () => {
             <h3 className="font-headline text-2xl font-bold mt-4">Criação de Sites</h3>
             <p className="max-w-3xl text-lg text-muted-foreground">
             Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-6 mt-16">
+            <div className="relative flex h-32 w-32 items-center justify-center">
+              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+              <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+            </div>
+            <h3 className="font-headline text-2xl font-bold mt-4">Setor Criativo</h3>
+            <div className="flex gap-4 text-muted-foreground">
+              <span>Planejamento</span>
+              <span>Roteirização</span>
+              <span>Produção</span>
+            </div>
+            <p className="max-w-3xl text-lg text-muted-foreground">
+            Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
             </p>
           </div>
           
