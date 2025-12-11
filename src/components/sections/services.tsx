@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, MousePointerClick, Code2, Clapperboard, CheckCircle, ArrowDown } from "lucide-react";
+import { Users, DollarSign, Code2, Clapperboard, CheckCircle, ArrowDown } from "lucide-react";
 
 const services = [
   {
@@ -9,7 +9,7 @@ const services = [
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <MousePointerClick className="h-10 w-10 text-primary" />,
+    icon: <DollarSign className="h-10 w-10 text-primary animate-spin-slow" />,
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
