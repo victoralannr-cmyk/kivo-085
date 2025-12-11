@@ -44,7 +44,7 @@ const Header = () => {
       <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300 border",
         isScrolled 
           ? 'bg-background/80 backdrop-blur-xl shadow-lg border-white/10' 
-          : 'bg-background/20 backdrop-blur-lg border-white/5'
+          : 'bg-transparent backdrop-blur-lg border-white/5'
       )}>
         <Link href="#home" className="flex items-center space-x-2">
           <Image 
@@ -68,7 +68,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center space-x-2">
-          <Button className="hidden md:inline-flex bg-gradient-to-r from-[#101729] via-[#19233A] to-[#101729] bg-[length:200%_auto] text-primary-foreground transition-transform duration-300 animate-pulse-glow hover:scale-105">
+          <Button className="hidden md:inline-flex bg-gradient-to-r from-[#101729] via-[#19233A] to-[#101729] bg-[length:200%_auto] text-primary-foreground transition-transform duration-300 animate-pulse-slow-soft hover:scale-105">
             WhatsApp
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
