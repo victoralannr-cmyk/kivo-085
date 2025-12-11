@@ -40,7 +40,7 @@ const FaqSection = () => {
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
             <div className="mb-8">
-                <Button size="lg" className="rounded-full text-white animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
+                <Button size="lg" className="rounded-full animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
             </div>
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">Perguntas Frequentes</h2>
         </div>
