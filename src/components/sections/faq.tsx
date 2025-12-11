@@ -23,7 +23,7 @@ const faqItems = [
       "Sim, na Kivo entendemos que cada negócio é único. Por isso, criamos estratégias e planos personalizados baseados nas necessidades e objetivos específicos de cada cliente. Seja para aumentar a visibilidade online, melhorar as vendas ou construir uma presença digital de longo prazo, temos a solução ideal para você.",
   },
   {
-    question: "Como posso saber qual é o plano ideal para minha empresa?",
+    question: "4. Como posso saber qual é o plano ideal para minha empresa?",
     answer:
       "Nossa equipe está disponível para realizar uma consultoria personalizada e entender as necessidades da sua empresa. A partir daí, sugerimos o plano mais adequado — seja para crescimento rápido, posicionamento estratégico ou desenvolvimento digital contínuo.",
   },
