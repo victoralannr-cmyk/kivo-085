@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Users } from "lucide-react";
 
 const faqItems = [
   {
@@ -82,7 +82,10 @@ const FaqSection = () => {
           </div>
           
           <div className="flex flex-col items-center gap-6 mt-12">
-            <ArrowDown className="h-16 w-16 animate-bounce text-white" />
+            <div className="relative flex h-32 w-32 items-center justify-center">
+              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+              <Users className="h-16 w-16 animate-orbital-wobble text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+            </div>
             <p className="max-w-3xl text-lg text-muted-foreground">
               Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
             </p>

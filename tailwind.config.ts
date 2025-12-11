@@ -108,8 +108,8 @@ export default {
           '100%': { transform: 'translateY(0px)' },
         },
         'orbital-wobble': {
-          '0%, 100%': { transform: 'rotate(-5deg)' },
-          '50%': { transform: 'rotate(5deg)' },
+          '0%, 100%': { transform: 'translateY(0) rotate(-8deg)' },
+          '50%': { transform: 'translateY(-15px) rotate(8deg)' },
         },
         'shake': {
           '0%, 100%': { transform: 'translateX(0)' },
