@@ -6,7 +6,7 @@ import FloatingLogos from "@/components/ui/floating-logos";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
+    <section id="home" className="relative pt-48 pb-24 sm:pt-56 sm:pb-32 lg:pt-64 lg:pb-40 overflow-hidden">
       <FloatingLogos />
       <div className="absolute inset-0 -z-10 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-background via-transparent to-background"></div>
