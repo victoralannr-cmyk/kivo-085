@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -33,6 +33,9 @@ const HeroSection = () => {
             <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
               Entre em contato para agendar uma demonstração.
             </p>
+            <div className="mt-8 flex justify-center">
+                <ArrowDown className="h-8 w-8 text-primary animate-bounce" />
+            </div>
           </div>
         </div>
       </div>
