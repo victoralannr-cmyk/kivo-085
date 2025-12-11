@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
+import { ArrowDown } from "lucide-react";
 
 const faqItems = [
   {
@@ -72,8 +73,15 @@ const FaqSection = () => {
               é a sua vitrine digital!
             </span>
           </p>
+
+          <div className="flex flex-col items-center gap-4 my-8">
+            <ArrowDown className="h-16 w-16 text-primary animate-bounce" />
+            <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
+              <p className="font-semibold text-foreground">Estratégias de Vendas</p>
+            </div>
+          </div>
           
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-8">Perguntas Frequentes</h2>
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-16">Perguntas Frequentes</h2>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
