@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import FloatingLogos from "@/components/ui/floating-logos";
@@ -40,15 +39,6 @@ const HeroSection = () => {
             <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
               Entre em contato para agendar uma demonstração.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-6">
-                <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
-                <Link href="https://wa.me/" target="_blank">
-                  <Button size="lg" className="rounded-full text-white px-10 py-6 text-lg animate-gradient-flow" style={{backgroundColor: '#0a5c0a'}}>
-                    <WhatsAppIcon className="mr-2 h-6 w-6" />
-                    Whatsapp
-                  </Button>
-                </Link>
-            </div>
           </div>
         </div>
       </div>
