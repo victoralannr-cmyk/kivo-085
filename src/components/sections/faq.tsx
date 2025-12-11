@@ -39,9 +39,12 @@ const FaqSection = () => {
     <section id="faq" className="py-24 sm:py-32">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
-            <div className="mb-8">
-                <Button size="lg" className="rounded-full animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
-            </div>
+          <p className="mx-auto max-w-3xl text-xl font-medium text-foreground/90 mb-8">
+              <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos olhares certos. O seu <span className="text-primary">posicionamento</span> é a sua <span className="text-primary">vitrine digital!</span>
+          </p>
+          <div className="mb-8">
+              <Button size="lg" className="rounded-full animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
+          </div>
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">Perguntas Frequentes</h2>
         </div>
 
