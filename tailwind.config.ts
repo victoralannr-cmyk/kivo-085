@@ -100,8 +100,8 @@ export default {
           '100%': { backgroundPosition: '0% 50%' },
         },
         'pulse-glow': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.85' },
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
         },
       },
       animation: {
