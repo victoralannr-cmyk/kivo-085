@@ -95,12 +95,12 @@ export default {
           },
         },
         'gradient-flow': {
-          '0%': { backgroundPosition: '-200% 50%' },
-          '100%': { backgroundPosition: '200% 50%' },
+          '0%': { backgroundPosition: '200% 50%' },
+          '100%': { backgroundPosition: '-200% 50%' },
         },
-        'pulse-slow': {
+        'pulse-light': {
           '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.05)' },
+          '50%': { transform: 'scale(1.03)' },
         },
         'float': {
           '0%': { transform: 'translateY(0px)' },
@@ -116,8 +116,8 @@ export default {
           '100%': { transform: 'rotate3d(1, 1, 1, 360deg)' },
         },
         'code-pulse': {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.15)' },
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(10px)' },
         }
       },
       animation: {
