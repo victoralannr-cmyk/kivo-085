@@ -31,7 +31,7 @@ const HeroSection = () => {
           </span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 btn-shine animate-gradient-flow">
+          <Button size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
             Agendar uma Demonstração
           </Button>
         </div>
