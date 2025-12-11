@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import AnimatedCounter from "@/components/ui/animated-counter";
+import { ArrowDown } from "lucide-react";
 
 const faqItems = [
   {
@@ -62,9 +63,12 @@ const FaqSection = () => {
             </div>
           </div>
 
-          <p className="mx-auto max-w-3xl text-xl font-medium text-foreground/90 mb-8">
+          <p className="mx-auto max-w-3xl text-xl font-medium text-foreground/90 mb-4">
               <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos olhares certos. O seu <span className="text-primary">posicionamento</span> é a sua <span className="text-primary">vitrine digital!</span>
           </p>
+          <div className="flex justify-center mb-8">
+            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
+          </div>
           <div className="mb-8">
               <Button size="lg" className="rounded-full animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
           </div>
