@@ -68,7 +68,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center space-x-2">
-          <Button className="hidden md:inline-flex bg-gradient-to-r from-cyan-500 to-green-500 text-white hover:from-cyan-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
+          <Button className="hidden md:inline-flex bg-gradient-to-r from-[#19233A] via-[#AEB7C4] to-[#19233A] bg-[length:200%_auto] text-primary-foreground hover:scale-105 transition-transform duration-300 animate-pulse-glow">
             WhatsApp
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
