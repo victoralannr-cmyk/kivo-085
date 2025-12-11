@@ -18,7 +18,7 @@ const faqItems = [
       "A Kivo orquestra o crescimento digital da sua marca por meio da integração de design, tecnologia e performance. Criamos estratégias personalizadas que posicionam sua marca de forma única e eficaz, utilizando campanhas de tráfego pago, automação e otimização contínua para gerar resultados reais e mensuráveis.",
   },
   {
-    question: "A Kivo faz um plano personalizado para minha empresa?",
+    question: "3. A Kivo faz um plano personalizado para minha empresa?",
     answer:
       "Sim, na Kivo entendemos que cada negócio é único. Por isso, criamos estratégias e planos personalizados baseados nas necessidades e objetivos específicos de cada cliente. Seja para aumentar a visibilidade online, melhorar as vendas ou construir uma presença digital de longo prazo, temos a solução ideal para você.",
   },
