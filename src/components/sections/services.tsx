@@ -21,13 +21,7 @@ const services = [
   {
     icon: <Clapperboard className="h-10 w-10 text-primary" />,
     title: "Setor Criativo",
-    description: "Produzimos vídeos, designs e textos que vendem, transformando ideias em conteúdo criativo e de alto impacto.",
-    details: [
-        { item: "Planejamento" },
-        { item: "Roteirização" },
-        { item: "Produção" },
-    ],
-    highlight: "Desenvolvemos posicionamento e vitrines digitais que geram crescimento orgânico, mesmo sem depender de investimento em anúncios."
+    description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
 ];
 
