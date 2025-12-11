@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -41,7 +41,7 @@ const Header = () => {
         'fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out w-full max-w-6xl',
       )}
     >
-      <div className={cn("container flex h-20 items-center justify-between rounded-full transition-all duration-300 border",
+      <div className={cn("container relative flex h-20 items-center justify-center md:justify-between rounded-full transition-all duration-300 border",
         isScrolled 
           ? 'bg-background/80 backdrop-blur-xl shadow-lg border-white/10' 
           : 'bg-transparent backdrop-blur-lg border-white/5'
@@ -67,8 +67,7 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center space-x-2">
-          
+        <div className="absolute right-4 md:static flex items-center space-x-2">
           <Button
             variant="ghost"
             size="icon"
@@ -93,7 +92,6 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            
           </div>
         </div>
       )}
