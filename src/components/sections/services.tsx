@@ -1,10 +1,10 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Megaphone, MousePointerClick, Code2, Clapperboard, CheckCircle, ArrowDown } from "lucide-react";
+import { Users, MousePointerClick, Code2, Clapperboard, CheckCircle, ArrowDown } from "lucide-react";
 
 const services = [
   {
-    icon: <Megaphone className="h-10 w-10 text-primary" />,
+    icon: <Users className="h-10 w-10 text-primary" />,
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
