@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: "Como faço para começar a trabalhar com a Kivo?",
     answer:
-      "É simples! Clique no botão 'Fale com um especialista' ou entre em contato pelo WhatsApp. Estamos prontos para iniciar essa parceria de sucesso.",
+      "É simples! Basta entrar em contato conosco para agendar uma conversa. Vamos entender sua necessidade e criar um plano estratégico alinhado aos seus objetivos. A Kivo está pronta para orquestrar o crescimento da sua marca no digital.",
   },
 ];
 
