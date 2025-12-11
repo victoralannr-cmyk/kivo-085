@@ -124,10 +124,8 @@ export default {
           '50%': { transform: 'rotate(-15deg)' },
         },
         'camera-flash': {
-          '0%, 100%': { transform: 'rotate(0deg)', filter: 'brightness(1)' },
-          '25%': { transform: 'rotate(5deg)', filter: 'brightness(1.5) drop-shadow(0 0 5px hsl(var(--primary)))' },
-          '50%': { transform: 'rotate(-5deg)', filter: 'brightness(1)' },
-          '75%': { transform: 'rotate(0deg)', filter: 'brightness(1.5) drop-shadow(0 0 5px hsl(var(--primary)))' },
+          '0%, 100%': { filter: 'brightness(1) drop-shadow(0 0 0 transparent)' },
+          '50%': { filter: 'brightness(1.5) drop-shadow(0 0 10px hsl(var(--primary)))' },
         }
       },
       animation: {
