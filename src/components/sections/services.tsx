@@ -16,7 +16,7 @@ const services = [
   {
     icon: <Code2 className="h-10 w-10 text-primary" />,
     title: "Criação de Sites",
-    description: "Construímos sites que combinam estética, movimento e funcionalidade para proporcionar uma experiência de usuário impecável.",
+    description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
     icon: <Clapperboard className="h-10 w-10 text-primary" />,
