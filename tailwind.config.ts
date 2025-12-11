@@ -111,6 +111,11 @@ export default {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' },
         },
+        'shake': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-3px) translateY(3px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(3px) translateY(-3px)' },
+        },
         'spin-3d': {
           '0%': { transform: 'rotate3d(1, 1, 1, 0deg)' },
           '100%': { transform: 'rotate3d(1, 1, 1, 360deg)' },
@@ -131,6 +136,7 @@ export default {
         'gradient-flow': 'gradient-flow 3.5s linear infinite',
         'float': 'float 5s ease-in-out infinite',
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
+        'shake': 'shake 1.5s ease-in-out infinite',
         'spin-3d': 'spin-3d 4s linear infinite',
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
         'camera-flash': 'camera-flash 3s ease-in-out infinite',

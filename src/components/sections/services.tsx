@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Video, Code } from "lucide-react";
+import { Users, DollarSign, Code, Video } from "lucide-react";
 
 const services = [
   {
@@ -8,7 +8,7 @@ const services = [
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <DollarSign className="h-10 w-10 text-primary animate-orbital-wobble" style={{ animationDelay: '0.2s' }} />,
+    icon: <DollarSign className="h-10 w-10 text-primary animate-shake" style={{ animationDelay: '0.2s' }} />,
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
@@ -36,7 +36,7 @@ const ServicesSection = () => {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col bg-card/20 border-border/20 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
+            <Card key={service.title} className="flex flex-col bg-card/5 border-border/10 hover:border-primary/50 hover:bg-card/10 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
               <CardHeader className="items-center text-center">
                 {service.icon}
                 <CardTitle className="mt-4">{service.title}</CardTitle>
