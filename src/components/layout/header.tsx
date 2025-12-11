@@ -33,7 +33,7 @@ const Header = () => {
   const normalLogo = "https://i.postimg.cc/MpwpmLSX/Captura-de-tela-2025-12-10-175124-removebg-preview.png";
   const scrolledLogo = "https://i.postimg.cc/QxKrKJ9z/Captura-de-tela-2025-11-30-224857-removebg-preview.png";
 
-  const logoSrc = isMobile && isScrolled ? scrolledLogo : normalLogo;
+  const showScrolledLogo = isMobile && isScrolled;
 
   return (
     <header
@@ -46,15 +46,23 @@ const Header = () => {
           ? 'bg-background/80 backdrop-blur-xl shadow-lg border-white/10' 
           : 'bg-transparent backdrop-blur-lg border-white/5'
       )}>
-        <Link href="#home" className="flex items-center space-x-2">
-          <Image 
-            src={logoSrc}
-            alt="Kivo Logo"
-            width={isMobile && isScrolled ? 40 : 100}
-            height={40}
-            className="h-10 w-auto transition-all duration-300"
-            key={logoSrc}
-          />
+        <Link href="#home" className="flex items-center justify-center flex-1 md:flex-none">
+          <div className="relative h-10 transition-all duration-500 ease-in-out" style={{ width: showScrolledLogo ? 40 : 100 }}>
+            <Image 
+              src={normalLogo}
+              alt="Kivo Logo"
+              fill
+              sizes="100px"
+              className={cn("object-contain transition-opacity duration-500 ease-in-out", showScrolledLogo ? 'opacity-0' : 'opacity-100')}
+            />
+            <Image 
+              src={scrolledLogo}
+              alt="Kivo Logo Scrolled"
+              fill
+              sizes="40px"
+              className={cn("object-contain transition-opacity duration-500 ease-in-out", showScrolledLogo ? 'opacity-100' : 'opacity-0')}
+            />
+          </div>
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
