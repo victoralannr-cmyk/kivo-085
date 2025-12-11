@@ -114,6 +114,10 @@ export default {
         'spin-3d': {
           '0%': { transform: 'rotate3d(1, 1, 1, 0deg)' },
           '100%': { transform: 'rotate3d(1, 1, 1, 360deg)' },
+        },
+        'code-pulse': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.15)' },
         }
       },
       animation: {
@@ -123,6 +127,7 @@ export default {
         'float': 'float 5s ease-in-out infinite',
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
         'spin-3d': 'spin-3d 4s linear infinite',
+        'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
       },
     },
   },

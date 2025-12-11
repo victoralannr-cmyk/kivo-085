@@ -14,7 +14,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <Code2 className="h-10 w-10 text-primary" />,
+    icon: <Code2 className="h-10 w-10 text-primary animate-code-pulse" />,
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
