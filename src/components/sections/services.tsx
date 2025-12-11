@@ -1,7 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Code2, CheckCircle } from "lucide-react";
-import Image from "next/image";
+import { Users, DollarSign, Code2, CheckCircle, Video } from "lucide-react";
 
 const services = [
   {
@@ -20,7 +19,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Image src="https://i.postimg.cc/nr10jYf9/Captura-de-tela-2025-12-11-192246-removebg-preview.png" alt="Câmera antiga" width={40} height={40} className="h-10 w-10 text-primary animate-camera-flash" />,
+    icon: <Video className="h-10 w-10 text-primary animate-camera-flash" />,
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
