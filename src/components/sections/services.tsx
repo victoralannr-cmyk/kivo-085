@@ -1,24 +1,46 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, DollarSign, Code, Video } from "lucide-react";
 
+const MetallicIcon = ({ children }: { children: React.ReactNode }) => (
+  <span className="bg-gradient-to-br from-slate-300 via-slate-500 to-slate-400 bg-clip-text text-transparent">
+    {children}
+  </span>
+);
+
 const services = [
   {
-    icon: <Users className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0s' }} />,
+    icon: (
+      <MetallicIcon>
+        <Users className="h-10 w-10 animate-float" style={{ animationDelay: '0s' }} />
+      </MetallicIcon>
+    ),
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <DollarSign className="h-10 w-10 text-primary animate-spin-3d" style={{ animationDelay: '0.2s' }} />,
+    icon: (
+      <MetallicIcon>
+        <DollarSign className="h-10 w-10 animate-spin-3d" style={{ animationDelay: '0.2s' }} />
+      </MetallicIcon>
+    ),
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <Code className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
+    icon: (
+      <MetallicIcon>
+        <Code className="h-10 w-10 animate-float" style={{ animationDelay: '0.4s' }} />
+      </MetallicIcon>
+    ),
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Video className="h-10 w-10 text-primary animate-camera-flash" style={{ animationDelay: '0.6s' }} />,
+    icon: (
+      <MetallicIcon>
+        <Video className="h-10 w-10 animate-camera-flash" style={{ animationDelay: '0.6s' }} />
+      </MetallicIcon>
+    ),
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
