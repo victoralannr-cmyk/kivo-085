@@ -15,7 +15,7 @@ const faqItems = [
   {
     question: "Como a Kivo ajuda minha empresa a crescer digitalmente?",
     answer:
-      "Utilizamos modelos preditivos e estratégias personalizadas para aumentar sua visibilidade, atrair clientes qualificados e posicionar sua marca como líder de mercado.",
+      "A Kivo orquestra o crescimento digital da sua marca por meio da integração de design, tecnologia e performance. Criamos estratégias personalizadas que posicionam sua marca de forma única e eficaz, utilizando campanhas de tráfego pago, automação e otimização contínua para gerar resultados reais e mensuráveis.",
   },
   {
     question: "A Kivo faz um plano personalizado para minha empresa?",
