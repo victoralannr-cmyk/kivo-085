@@ -8,10 +8,12 @@ const FloatingLogos = () => {
     return Array.from({ length: 15 }).map((_, i) => ({
       id: i,
       src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      animationDuration: `${Math.random() * 5 + 5}s`, // 5s to 10s
-      animationDelay: `${Math.random() * 5}s`,
+      // Adjust positioning to cover a wider area, even outside the initial viewport
+      top: `${Math.random() * 120 - 10}%`, // from -10% to 110%
+      left: `${Math.random() * 120 - 10}%`,// from -10% to 110%
+      animationDuration: `${Math.random() * 8 + 7}s`, // 7s to 15s for slower, more graceful movement
+      animationDelay: `${Math.random() * 8}s`,
+      size: Math.random() * 40 + 40, // random size between 40 and 80px
     }));
   }, []);
 
@@ -22,8 +24,8 @@ const FloatingLogos = () => {
           key={logo.id}
           src={logo.src}
           alt="Floating logo"
-          width={60}
-          height={60}
+          width={logo.size}
+          height={logo.size}
           className="animate-float absolute opacity-5"
           style={{
             top: logo.top,
