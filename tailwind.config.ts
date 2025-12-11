@@ -113,7 +113,7 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-flow': 'gradient-flow 3s linear infinite',
-        'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 8s ease-in-out infinite',
         'float': 'float 5s ease-in-out infinite',
       },
     },
