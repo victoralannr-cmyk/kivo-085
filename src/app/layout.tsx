@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins, Montserrat } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import Header from '@/components/layout/header';
@@ -9,14 +9,8 @@ import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['400', '600', '700', '800'],
   variable: '--font-poppins',
-});
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['700', '800'],
-  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -34,9 +28,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased', poppins.variable, montserrat.variable)}>
+      <body className={cn('font-body antialiased', poppins.variable)}>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
