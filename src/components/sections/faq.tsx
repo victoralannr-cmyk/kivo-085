@@ -44,7 +44,7 @@ const stats = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-24 sm:py-32">
+    <section id="faq" className="py-24 sm:py-32 bg-black">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-16">
@@ -66,9 +66,6 @@ const FaqSection = () => {
           <p className="mx-auto max-w-3xl text-xl font-medium text-foreground/90 mb-4">
               <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos olhares certos. O seu <span className="text-primary">posicionamento</span> é a sua <span className="text-primary">vitrine digital!</span>
           </p>
-          <div className="flex justify-center mb-8">
-            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
-          </div>
           
           <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-8">Perguntas Frequentes</h2>
         </div>
