@@ -95,9 +95,8 @@ export default {
           },
         },
         'gradient-flow': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          '0%': { backgroundPosition: '200% 50%' },
+          '100%': { backgroundPosition: '-200% 50%' },
         },
         'pulse-slow': {
           '0%, 100%': { transform: 'scale(1)' },
@@ -107,6 +106,10 @@ export default {
           '0%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
           '100%': { transform: 'translateY(0px)' },
+        },
+        'orbital-wobble': {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
         }
       },
       animation: {
@@ -114,6 +117,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-flow': 'gradient-flow 3.5s linear infinite',
         'float': 'float 5s ease-in-out infinite',
+        'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
       },
     },
   },
