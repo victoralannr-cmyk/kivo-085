@@ -6,6 +6,8 @@ import {
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
 import { ArrowDown, Users, Code2, Video } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const faqItems = [
   {
@@ -74,8 +76,11 @@ const FaqSection = () => {
             </span>
           </p>
           
-          <div className="flex flex-col items-center gap-4 my-8">
+          <div className="flex justify-center my-8">
             <ArrowDown className="h-16 w-16 text-white animate-bounce" />
+          </div>
+
+          <div className="flex flex-col items-center gap-4 my-8">
             <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
               <p className="font-semibold text-foreground">Estratégias de Vendas</p>
             </div>
@@ -116,6 +121,11 @@ const FaqSection = () => {
             <p className="max-w-3xl text-lg text-muted-foreground">
             Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
             </p>
+            <div className="mt-8">
+              <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
+                <Link href="#">é so clicar aqui</Link>
+              </Button>
+            </div>
           </div>
           
           <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-24">Perguntas Frequentes</h2>
