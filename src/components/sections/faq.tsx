@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const faqItems = [
   {
-    question: "Quais serviços a Kivo oferece?",
+    question: "1. Quais serviços a Kivo oferece?",
     answer:
       "A Kivo oferece soluções completas para o crescimento digital de marcas e pessoas. Nossos serviços incluem criação de identidade visual, estratégias de tráfego pago, gestão de redes sociais, criação de sites personalizados, automação de marketing, e campanhas de branding. Trabalhamos com empresas que buscam resultados reais, inovação e um posicionamento digital sólido.",
   },
