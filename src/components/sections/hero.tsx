@@ -25,7 +25,7 @@ const HeroSection = () => {
           </span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="w-[293px] h-[43px] bg-gradient-to-r from-[#19233A] via-[#AEB7C4] to-[#19233A] bg-[length:200%_auto] text-primary-foreground animate-pulse-glow hover:animate-none hover:scale-105 transition-all duration-300">
+          <Button size="lg" className="w-[293px] h-[43px] bg-gradient-to-r from-[#19233A] via-[#AEB7C4] to-[#19233A] bg-[length:200%_auto] text-primary-foreground hover:scale-105 transition-all duration-300">
             WhatsApp
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
