@@ -1,31 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Code2, CheckCircle, ArrowDown } from "lucide-react";
-
-const CustomClapperboardIcon = () => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width="40" 
-    height="40" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="hsl(var(--primary))" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className="h-10 w-10 text-primary"
-  >
-    <g className="animate-clapper-board" style={{ transformOrigin: '3.8px 6px' }}>
-      <path d="M20.2 6 3.8 6" />
-      <path d="M6.8 12 3.8 6" />
-    </g>
-    <path d="m20.2 6-3 10.7L3.8 6" />
-    <path d="M20.2 6h-3.4"/>
-    <path d="m16.8 16.7 3.4-10.7" />
-    <path d="m6.8 12 10 4.7" />
-  </svg>
-);
-
+import { Users, DollarSign, Code2, CheckCircle } from "lucide-react";
+import { OldCameraIcon } from "@/components/ui/icons";
 
 const services = [
   {
@@ -44,7 +20,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <CustomClapperboardIcon />,
+    icon: <OldCameraIcon className="h-10 w-10 text-primary animate-camera-flash" />,
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
@@ -59,9 +35,6 @@ const ServicesSection = () => {
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
-          <div className="mt-8 flex justify-center">
-            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
-          </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (

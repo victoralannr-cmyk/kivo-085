@@ -122,6 +122,12 @@ export default {
         'clapper-board': {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(-15deg)' },
+        },
+        'camera-flash': {
+          '0%, 100%': { transform: 'rotate(0deg)', filter: 'brightness(1)' },
+          '25%': { transform: 'rotate(5deg)', filter: 'brightness(1.5) drop-shadow(0 0 5px hsl(var(--primary)))' },
+          '50%': { transform: 'rotate(-5deg)', filter: 'brightness(1)' },
+          '75%': { transform: 'rotate(0deg)', filter: 'brightness(1.5) drop-shadow(0 0 5px hsl(var(--primary)))' },
         }
       },
       animation: {
@@ -133,6 +139,7 @@ export default {
         'spin-3d': 'spin-3d 4s linear infinite',
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
         'clapper-board': 'clapper-board 1s ease-in-out infinite',
+        'camera-flash': 'camera-flash 3s ease-in-out infinite',
       },
     },
   },
