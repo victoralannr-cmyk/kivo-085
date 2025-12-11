@@ -101,9 +101,9 @@ export default {
         },
         'pulse-glow': {
           '0%, 100%': {
-            boxShadow: '0 0 0 0 hsl(var(--primary) / 0.7)',
+            boxShadow: '0 0 0 0 hsl(var(--primary) / 0.5)',
           },
-          '70%': {
+          '50%': {
             boxShadow: '0 0 0 10px hsl(var(--primary) / 0)',
           },
         },
@@ -112,7 +112,7 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-flow': 'gradient-flow 6s ease infinite',
-        'pulse-glow': 'pulse-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-glow': 'pulse-glow 3s ease-out infinite',
       },
     },
   },
