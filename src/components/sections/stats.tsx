@@ -13,9 +13,11 @@ const StatsSection = () => {
                 <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
                     {stats.map((stat) => (
                         <div key={stat.label} className="flex flex-col items-center">
-                            <div className="font-headline text-5xl font-bold text-primary flex">
-                              <span>{stat.prefix}</span>
-                              <AnimatedCounter to={stat.value} />
+                            <div className="font-headline text-5xl font-bold flex">
+                                <span className="text-wavy-gradient">
+                                    {stat.prefix}
+                                    <AnimatedCounter to={stat.value} />
+                                </span>
                             </div>
                             <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
                         </div>
