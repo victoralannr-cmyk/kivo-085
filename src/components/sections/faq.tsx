@@ -44,7 +44,7 @@ const stats = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="py-24 sm:py-32 bg-black">
+    <section id="faq" className="py-24 sm:py-32 bg-background">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-16">

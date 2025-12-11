@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-12 sm:py-16 bg-black">
+    <section id="contato" className="py-12 sm:py-16 bg-background">
       <div className="container text-center">
         <h2 className="font-headline text-3xl font-bold sm:text-4xl">Vamos conversar?</h2>
         <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">

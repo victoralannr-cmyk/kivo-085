@@ -18,7 +18,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Video className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.6s' }} />,
+    icon: <Video className="h-10 w-10 text-primary animate-camera-flash" style={{ animationDelay: '0.6s' }} />,
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
@@ -26,7 +26,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-24 sm:py-32 bg-black">
+    <section id="servicos" className="py-24 sm:py-32 bg-background">
       <div className="container">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">Estratégias de Vendas</h2>
