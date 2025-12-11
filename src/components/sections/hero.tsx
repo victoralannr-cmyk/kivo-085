@@ -3,10 +3,23 @@ import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import FloatingLogos from "@/components/ui/floating-logos";
+import LightRays from "@/components/ui/light-rays";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative pt-64 pb-24 sm:pt-72 sm:pb-32 lg:pt-80 lg:pb-40 overflow-hidden">
+      <LightRays
+          raysOrigin="top-center"
+          raysColor="#19233A"
+          raysSpeed={1.0}
+          lightSpread={2.0}
+          rayLength={3.0}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="absolute inset-0"
+        />
       <FloatingLogos />
       <div className="absolute inset-0 -z-10 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-background via-transparent to-background"></div>
