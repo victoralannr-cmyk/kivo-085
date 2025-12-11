@@ -36,7 +36,7 @@ const HeroSection = () => {
               Entre em contato para agendar uma demonstração.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-6">
-                <ArrowDown width={59.21} height={120} className="text-primary animate-bounce" />
+                <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
                 <Link href="https://wa.me/" target="_blank">
                   <Button size="lg" className="rounded-full text-white px-10 py-6 text-lg" style={{backgroundColor: '#0a5c0a'}}>
                     <WhatsAppIcon className="mr-2 h-6 w-6" />
