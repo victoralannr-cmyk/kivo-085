@@ -28,6 +28,12 @@ const HeroSection = () => {
           <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white animate-[pulse-slow_20s_ease-in-out_infinite] hover:brightness-110 transition-all duration-300">
             Agendar uma Demonstração
           </Button>
+          <div className="mt-10">
+            <h2 className="font-headline text-3xl font-bold sm:text-4xl">Vamos conversar?</h2>
+            <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
+              Entre em contato para agendar uma demonstração.
+            </p>
+          </div>
         </div>
       </div>
     </section>
