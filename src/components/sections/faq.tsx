@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import AnimatedCounter from "@/components/ui/animated-counter";
 
 const faqItems = [
   {
@@ -34,11 +35,33 @@ const faqItems = [
   },
 ];
 
+const stats = [
+    { value: 50, label: 'Projetos Executados', prefix: '+' },
+    { value: 200, label: 'Estratégias de Crescimento', prefix: '+' },
+    { value: 100, label: 'Marcas Elevadas', prefix: '+' },
+];
+
 const FaqSection = () => {
   return (
     <section id="faq" className="py-24 sm:py-32">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
+          <div className="mb-16">
+            <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center">
+                  <div className="font-headline text-5xl font-bold flex">
+                    <span className="text-wavy-gradient">
+                      {stat.prefix}
+                      <AnimatedCounter to={stat.value} />
+                    </span>
+                  </div>
+                  <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <p className="mx-auto max-w-3xl text-xl font-medium text-foreground/90 mb-8">
               <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos olhares certos. O seu <span className="text-primary">posicionamento</span> é a sua <span className="text-primary">vitrine digital!</span>
           </p>
