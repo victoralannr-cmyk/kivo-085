@@ -63,8 +63,10 @@ const FaqSection = () => {
             </div>
           </div>
 
-          <p className="mx-auto max-w-3xl font-headline text-2xl font-bold text-foreground/90 mb-4 sm:text-3xl">
-              <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos olhares certos. O seu <span className="text-primary">posicionamento</span> é a sua <span className="text-primary">vitrine digital!</span>
+          <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
+            <span className="text-wavy-gradient">
+              Tráfego colocam o seu negócio à frente dos olhares certos. O seu posicionamento é a sua vitrine digital!
+            </span>
           </p>
           
           <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-8">Perguntas Frequentes</h2>
