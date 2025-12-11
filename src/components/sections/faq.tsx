@@ -13,7 +13,7 @@ const faqItems = [
       "A Kivo oferece soluções completas para o crescimento digital de marcas e pessoas. Nossos serviços incluem criação de identidade visual, estratégias de tráfego pago, gestão de redes sociais, criação de sites personalizados, automação de marketing, e campanhas de branding. Trabalhamos com empresas que buscam resultados reais, inovação e um posicionamento digital sólido.",
   },
   {
-    question: "Como a Kivo ajuda minha empresa a crescer digitalmente?",
+    question: "2. Como a Kivo ajuda minha empresa a crescer digitalmente?",
     answer:
       "A Kivo orquestra o crescimento digital da sua marca por meio da integração de design, tecnologia e performance. Criamos estratégias personalizadas que posicionam sua marca de forma única e eficaz, utilizando campanhas de tráfego pago, automação e otimização contínua para gerar resultados reais e mensuráveis.",
   },
