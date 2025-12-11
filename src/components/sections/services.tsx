@@ -1,6 +1,5 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Code2, CheckCircle, Video } from "lucide-react";
+import { Users, DollarSign, Code2, Video, ArrowDown } from "lucide-react";
 
 const services = [
   {
@@ -34,6 +33,9 @@ const ServicesSection = () => {
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
+          <div className="flex justify-center mt-8 mb-12">
+            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
+          </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
@@ -44,19 +46,6 @@ const ServicesSection = () => {
               </CardHeader>
               <CardContent className="flex-grow flex flex-col text-center">
                 <p className="text-muted-foreground flex-grow">{service.description}</p>
-                {service.details && (
-                    <div className="mt-4 text-left">
-                        <ul className="space-y-2">
-                          {service.details.map(detail => (
-                            <li key={detail.item} className="flex items-center text-sm text-muted-foreground">
-                              <CheckCircle className="h-4 w-4 mr-2 text-accent" />
-                              {detail.item}
-                            </li>
-                          ))}
-                        </ul>
-                        <p className="mt-4 text-sm font-medium text-accent/90">{service.highlight}</p>
-                    </div>
-                )}
               </CardContent>
             </Card>
           ))}
