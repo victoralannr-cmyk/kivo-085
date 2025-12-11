@@ -72,7 +72,7 @@
   }
 
   .text-wavy-gradient {
-    @apply bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
+    @apply bg-gradient-to-r from-blue-900 via-blue-500 to-blue-900 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
   }
 
   .btn-shine {
