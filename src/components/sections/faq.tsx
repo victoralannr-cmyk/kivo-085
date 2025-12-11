@@ -69,10 +69,8 @@ const FaqSection = () => {
           <div className="flex justify-center mb-8">
             <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
           </div>
-          <div className="mb-8">
-              <Button size="lg" className="rounded-full animate-gradient-flow hover:brightness-110 transition-all duration-300">Fale com um especialista</Button>
-          </div>
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl">Perguntas Frequentes</h2>
+          
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-8">Perguntas Frequentes</h2>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
