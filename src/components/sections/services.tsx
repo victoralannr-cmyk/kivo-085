@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Video, Code, ArrowDown } from "lucide-react";
+import { Users, DollarSign, Video, Code } from "lucide-react";
 
 const services = [
   {
@@ -8,7 +8,7 @@ const services = [
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <DollarSign className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.2s' }} />,
+    icon: <DollarSign className="h-10 w-10 text-primary animate-orbital-wobble" style={{ animationDelay: '0.2s' }} />,
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
@@ -29,13 +29,10 @@ const ServicesSection = () => {
     <section id="servicos" className="py-24 sm:py-32">
       <div className="container">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl">Estratégias de Vendas</h2>
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl">Nossos Serviços</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
-          <div className="flex justify-center my-8">
-            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
-          </div>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
