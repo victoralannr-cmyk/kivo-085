@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Video, ArrowDown } from "lucide-react";
+import { Users, DollarSign, Video, Code, ArrowDown } from "lucide-react";
 
 const services = [
   {
@@ -13,7 +13,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <Video className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
+    icon: <Code className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
