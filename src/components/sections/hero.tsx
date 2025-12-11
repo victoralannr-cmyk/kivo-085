@@ -32,7 +32,7 @@ const HeroSection = () => {
           </span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 btn-shine animate-gradient-flow" style={{animation: 'pulse-light 4s infinite'}}>
+          <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 btn-shine animate-gradient-flow" style={{animation: 'pulse-light 3s infinite'}}>
             Agendar uma Demonstração
           </Button>
           <div className="mt-10">
