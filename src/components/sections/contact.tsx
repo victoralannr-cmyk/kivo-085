@@ -10,13 +10,7 @@ const ContactSection = () => {
           Entre em contato para agendar uma demonstração e descobrir como podemos transformar seu negócio.
         </p>
         <div className="mt-10">
-          <Button
-            size="lg"
-            className="h-14 px-8 text-lg font-bold bg-gradient-to-r from-cyan-500 to-green-500 text-white hover:from-cyan-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
-          >
-            WhatsApp
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          
         </div>
       </div>
     </section>
