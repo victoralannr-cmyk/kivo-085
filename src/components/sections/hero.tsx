@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import { WhatsAppIcon } from "@/components/ui/icons";
+import FloatingLogos from "@/components/ui/floating-logos";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative py-24 sm:py-32 lg:py-40">
+    <section id="home" className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
+      <FloatingLogos />
       <div className="absolute inset-0 -z-10 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-background via-transparent to-background"></div>
       <div className="container text-center">
