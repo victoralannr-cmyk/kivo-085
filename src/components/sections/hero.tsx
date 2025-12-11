@@ -34,7 +34,7 @@ const HeroSection = () => {
               Entre em contato para agendar uma demonstração.
             </p>
             <div className="mt-8 flex justify-center">
-                <ArrowDown width={59.21} height={78.96} className="text-primary animate-bounce" />
+                <ArrowDown width={59.21} height={120} className="text-primary animate-bounce" />
             </div>
           </div>
         </div>
