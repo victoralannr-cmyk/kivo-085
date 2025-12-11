@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "A Kivo faz um plano personalizado para minha empresa?",
     answer:
-      "Sim, cada plano é cuidadosamente elaborado para atender às necessidades e objetivos específicos do seu negócio. Analisamos seu mercado e público para criar a estratégia perfeita.",
+      "Sim, na Kivo entendemos que cada negócio é único. Por isso, criamos estratégias e planos personalizados baseados nas necessidades e objetivos específicos de cada cliente. Seja para aumentar a visibilidade online, melhorar as vendas ou construir uma presença digital de longo prazo, temos a solução ideal para você.",
   },
   {
     question: "Como posso saber qual é o plano ideal para minha empresa?",
