@@ -39,7 +39,7 @@ const ServicesSection = () => {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col bg-card/20 border-border/40 hover:border-primary/50 hover:bg-card/40 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
+            <Card key={service.title} className="flex flex-col bg-card/20 border-border/20 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
               <CardHeader className="items-center text-center">
                 {service.icon}
                 <CardTitle className="mt-4">{service.title}</CardTitle>
