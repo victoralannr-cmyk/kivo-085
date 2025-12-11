@@ -10,7 +10,7 @@ const faqItems = [
   {
     question: "Quais serviços a Kivo oferece?",
     answer:
-      "Oferecemos uma gama completa de serviços de marketing digital, incluindo Social Media, Tráfego Pago, Criação de Sites e Desenvolvimento de Conteúdo Criativo para impulsionar sua presença online.",
+      "A Kivo oferece soluções completas para o crescimento digital de marcas e pessoas. Nossos serviços incluem criação de identidade visual, estratégias de tráfego pago, gestão de redes sociais, criação de sites personalizados, automação de marketing, e campanhas de branding. Trabalhamos com empresas que buscam resultados reais, inovação e um posicionamento digital sólido.",
   },
   {
     question: "Como a Kivo ajuda minha empresa a crescer digitalmente?",
