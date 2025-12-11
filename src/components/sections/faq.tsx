@@ -28,7 +28,7 @@ const faqItems = [
       "Nossa equipe está disponível para realizar uma consultoria personalizada e entender as necessidades da sua empresa. A partir daí, sugerimos o plano mais adequado — seja para crescimento rápido, posicionamento estratégico ou desenvolvimento digital contínuo.",
   },
   {
-    question: "Como faço para começar a trabalhar com a Kivo?",
+    question: "5. Como faço para começar a trabalhar com a Kivo?",
     answer:
       "É simples! Basta entrar em contato conosco para agendar uma conversa. Vamos entender sua necessidade e criar um plano estratégico alinhado aos seus objetivos. A Kivo está pronta para orquestrar o crescimento da sua marca no digital.",
   },
