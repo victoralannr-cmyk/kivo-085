@@ -96,12 +96,11 @@ export default {
         },
         'gradient-flow': {
           '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
         },
         'pulse-slow': {
-          '0%, 100%': { transform: 'scale(1)', backgroundPosition: '0% 50%' },
-          '50%': { transform: 'scale(1.05)', backgroundPosition: '100% 50%' },
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
         },
         'float': {
           '0%': { transform: 'translateY(0px)' },
@@ -112,7 +111,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'gradient-flow': 'gradient-flow 2s ease infinite',
+        'gradient-flow': 'gradient-flow 3s linear infinite',
         'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
         'float': 'float 5s ease-in-out infinite',
       },
