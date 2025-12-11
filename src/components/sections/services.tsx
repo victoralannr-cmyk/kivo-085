@@ -19,7 +19,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Clapperboard className="h-10 w-10 text-primary" />,
+    icon: <Clapperboard className="h-10 w-10 text-primary animate-clapper-board" />,
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },

@@ -118,6 +118,10 @@ export default {
         'code-pulse': {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(10px)' },
+        },
+        'clapper-board': {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(-15deg)' },
         }
       },
       animation: {
@@ -128,6 +132,7 @@ export default {
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
         'spin-3d': 'spin-3d 4s linear infinite',
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
+        'clapper-board': 'clapper-board 1s ease-in-out infinite',
       },
     },
   },
