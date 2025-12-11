@@ -21,14 +21,22 @@ export const OldCameraIcon = ({ className }: { className?: string }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={cn("h-10 w-10", className)}
     >
-      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-      <circle cx="12" cy="13" r="3" />
-      <line x1="20" y1="4" x2="20" y2="4" className="light-flash" />
+      <path d="M19.5 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+      <path d="M4.5 3.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+      <path d="M7 6.5h10" />
+      <path d="M3 11.5h2.5" />
+      <path d="M18.5 11.5H21" />
+      <path d="M12 11.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+      <path d="M8 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+      <path d="M12.5 16.5h-1a2 2 0 0 1-2-2v-1h5v1a2 2 0 0 1-2 2Z" />
+      <path d="M10 21.5h4" />
+      <path d="m12 16.5 2-3h-4l2 3Z" />
+      <path d="M14.5 2.5 12 6h-1L8.5 2.5" />
     </svg>
   );
 };
