@@ -5,7 +5,9 @@ import { WhatsAppIcon } from "@/components/ui/icons";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="py-24 sm:py-32 lg:py-40">
+    <section id="home" className="relative py-24 sm:py-32 lg:py-40">
+      <div className="absolute inset-0 -z-10 h-full w-full grid-bg"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-background via-transparent to-background"></div>
       <div className="container text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
           <span className="animate-gradient-flow bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 bg-[length:200%_auto] bg-clip-text text-transparent">
