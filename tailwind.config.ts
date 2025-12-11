@@ -116,12 +116,9 @@ export default {
           '100%': { transform: 'rotate3d(1, 1, 1, 360deg)' },
         },
         'code-pulse': {
-          '0%, 100%': { transform: 'translateX(0)' },
+          '0%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(10px)' },
-        },
-        'clapper-board': {
-          '0%, 100%': { transform: 'rotate(0deg)' },
-          '50%': { transform: 'rotate(-15deg)' },
+          '100%': { transform: 'translateX(0)' },
         },
         'camera-flash': {
           '0%, 100%': { filter: 'brightness(1) drop-shadow(0 0 0 transparent)' },
@@ -136,7 +133,6 @@ export default {
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
         'spin-3d': 'spin-3d 4s linear infinite',
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
-        'clapper-board': 'clapper-board 1s ease-in-out infinite',
         'camera-flash': 'camera-flash 3s ease-in-out infinite',
       },
     },

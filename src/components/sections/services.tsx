@@ -3,22 +3,22 @@ import { Users, DollarSign, Code2, Video, ArrowDown } from "lucide-react";
 
 const services = [
   {
-    icon: <Users className="h-10 w-10 text-primary animate-float" />,
+    icon: <Users className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0s' }} />,
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <DollarSign className="h-10 w-10 text-primary animate-spin-3d" />,
+    icon: <DollarSign className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.2s' }} />,
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <Code2 className="h-10 w-10 text-primary animate-code-pulse" />,
+    icon: <Code2 className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.4s' }} />,
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Video className="h-10 w-10 text-primary animate-camera-flash" />,
+    icon: <Video className="h-10 w-10 text-primary animate-float" style={{ animationDelay: '0.6s' }} />,
     title: "Setor Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
