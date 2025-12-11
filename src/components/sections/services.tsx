@@ -9,7 +9,7 @@ const services = [
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
   {
-    icon: <DollarSign className="h-10 w-10 text-primary animate-spin-slow" />,
+    icon: <DollarSign className="h-10 w-10 text-primary animate-float" style={{animationDuration: '5s'}} />,
     title: "Tráfego Pago",
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
