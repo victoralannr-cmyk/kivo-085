@@ -110,6 +110,10 @@ export default {
         'orbital-wobble': {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' },
+        },
+        'flip-360': {
+          '0%, 100%': { transform: 'rotateX(0deg)' },
+          '50%': { transform: 'rotateX(180deg)' },
         }
       },
       animation: {
@@ -118,6 +122,7 @@ export default {
         'gradient-flow': 'gradient-flow 3.5s linear infinite',
         'float': 'float 5s ease-in-out infinite',
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
+        'flip-360': 'flip-360 2s ease-in-out infinite',
       },
     },
   },
