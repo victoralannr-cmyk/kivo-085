@@ -4,7 +4,7 @@ import { Users, DollarSign, Code2, Clapperboard, CheckCircle, ArrowDown } from "
 
 const services = [
   {
-    icon: <Users className="h-10 w-10 text-primary" />,
+    icon: <Users className="h-10 w-10 text-primary animate-float" />,
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
