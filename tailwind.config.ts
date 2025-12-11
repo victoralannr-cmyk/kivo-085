@@ -95,8 +95,8 @@ export default {
           },
         },
         'gradient-flow': {
-          '0%': { backgroundPosition: '200% 50%' },
-          '100%': { backgroundPosition: '-200% 50%' },
+          '0%': { backgroundPosition: '-200% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
         },
         'pulse-slow': {
           '0%, 100%': { transform: 'scale(1)' },
@@ -111,9 +111,9 @@ export default {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' },
         },
-        'flip-360': {
-          '0%, 100%': { transform: 'rotateX(0deg)' },
-          '50%': { transform: 'rotateX(180deg)' },
+        'spin-3d': {
+          '0%': { transform: 'rotate3d(1, 1, 1, 0deg)' },
+          '100%': { transform: 'rotate3d(1, 1, 1, 360deg)' },
         }
       },
       animation: {
@@ -122,7 +122,7 @@ export default {
         'gradient-flow': 'gradient-flow 3.5s linear infinite',
         'float': 'float 5s ease-in-out infinite',
         'orbital-wobble': 'orbital-wobble 4s ease-in-out infinite',
-        'flip-360': 'flip-360 2s ease-in-out infinite',
+        'spin-3d': 'spin-3d 4s linear infinite',
       },
     },
   },
