@@ -14,7 +14,7 @@ const ContactSection = () => {
           <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
         </div>
         <div className="mt-10">
-          <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 btn-shine animate-gradient-flow" style={{animation: 'pulse-light 3s infinite'}}>
+          <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 btn-shine animate-gradient-flow" style={{animation: 'pulse-light 3s infinite'}}>
             <Link href="#">Fale com um especialista</Link>
           </Button>
         </div>
