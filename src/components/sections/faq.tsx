@@ -81,6 +81,13 @@ const FaqSection = () => {
             </div>
           </div>
           
+          <div className="flex flex-col items-center gap-6 mt-12">
+            <ArrowDown className="h-16 w-16 animate-bounce text-white" />
+            <p className="max-w-3xl text-lg text-muted-foreground">
+              Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
+            </p>
+          </div>
+          
           <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-16">Perguntas Frequentes</h2>
         </div>
 
