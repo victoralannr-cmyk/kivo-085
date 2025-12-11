@@ -99,16 +99,16 @@ export default {
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
         },
-        'pulse-glow': {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.02)' },
+        'pulse-slow': {
+          '0%, 100%': { transform: 'scale(1)', filter: 'brightness(1)' },
+          '50%': { transform: 'scale(1.02)', filter: 'brightness(1.1)' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-flow': 'gradient-flow 6s ease infinite',
-        'pulse-glow': 'pulse-glow 20s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 20s ease-in-out infinite',
       },
     },
   },

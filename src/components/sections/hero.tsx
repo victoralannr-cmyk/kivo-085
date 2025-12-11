@@ -1,4 +1,11 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+const partners = [
+    { name: "Partner 1", logo: "https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg" },
+    { name: "Partner 2", logo: "https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg" },
+    { name: "Partner 3", logo: "https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg" },
+];
 
 const HeroSection = () => {
   return (
@@ -24,10 +31,31 @@ const HeroSection = () => {
           </span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white animate-pulse-glow hover:brightness-110 transition-all duration-300">
+          <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 text-white animate-[pulse-slow_20s_ease-in-out_infinite] hover:brightness-110 transition-all duration-300">
             Agendar uma Demonstração
           </Button>
         </div>
+
+        <div className="mt-20">
+          <p className="text-sm font-semibold text-muted-foreground tracking-wider">
+            CONFIADO PELAS PRINCIPAIS MARCAS
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3 items-center">
+            {partners.map((partner) => (
+              <div key={partner.name} className="col-span-1 flex justify-center">
+                <Image
+                  className="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={158}
+                  height={48}
+                  unoptimized
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
