@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown, Users } from "lucide-react";
+import { ArrowDown, Users, Code2 } from "lucide-react";
 
 const faqItems = [
   {
@@ -90,8 +90,19 @@ const FaqSection = () => {
               Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
             </p>
           </div>
+
+          <div className="flex flex-col items-center gap-6 mt-16">
+            <div className="relative flex h-32 w-32 items-center justify-center">
+              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+              <Code2 className="h-16 w-16 animate-code-pulse text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+            </div>
+            <h3 className="font-headline text-2xl font-bold mt-4">Criação de Sites</h3>
+            <p className="max-w-3xl text-lg text-muted-foreground">
+            Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.
+            </p>
+          </div>
           
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-16">Perguntas Frequentes</h2>
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-24">Perguntas Frequentes</h2>
         </div>
 
         <Accordion type="single" collapsible className="w-full">

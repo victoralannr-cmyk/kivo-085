@@ -128,7 +128,15 @@ export default {
         'camera-flash': {
           '0%, 100%': { filter: 'brightness(1) drop-shadow(0 0 0 transparent)' },
           '50%': { filter: 'brightness(1.5) drop-shadow(0 0 10px hsl(var(--primary)))' },
-        }
+        },
+        'shine-effect': {
+            '0%': {
+                transform: 'translateX(-150%) skewX(-30deg)',
+            },
+            '100%': {
+                transform: 'translateX(150%) skewX(-30deg)',
+            },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -140,6 +148,7 @@ export default {
         'spin-3d': 'spin-3d 4s linear infinite',
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
         'camera-flash': 'camera-flash 3s ease-in-out infinite',
+        'shine-effect': 'shine-effect 8s ease-in-out infinite',
       },
     },
   },
