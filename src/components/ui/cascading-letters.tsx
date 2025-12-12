@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 type CascadingLettersProps = {
   text: string;
   className?: string;
-  letterClassName?: (index: number) => string;
   stagger?: number;
   highlightedWords?: string[];
   highlightClassName?: string;
@@ -24,33 +23,34 @@ const CascadingLetters = ({
 
   return (
     <span className={cn('inline-block', className)}>
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block">
-          {word.split('').map((letter, indexInWord) => {
-            const currentLetterIndex = letterIndex++;
-            const isHighlighted = highlightedWords.some(
-              (hWord) =>
-                word.toLowerCase().includes(hWord.toLowerCase()) &&
-                hWord.toLowerCase().includes(word.toLowerCase())
-            );
+      {words.map((word, wordIndex) => {
+        const isHighlighted = highlightedWords.some(
+          (hWord) =>
+            word.toLowerCase().replace(/[.,]/g, '') === hWord.toLowerCase()
+        );
 
-            return (
-              <span
-                key={`${letter}-${currentLetterIndex}`}
-                className={cn(
-                  'animate-cascade-in inline-block',
-                  isHighlighted && highlightClassName
-                )}
-                style={{ animationDelay: `${currentLetterIndex * stagger}s` }}
-              >
-                {letter}
-              </span>
-            );
-          })}
-          {wordIndex < words.length - 1 && '\u00A0'}{' '}
-          {/* Adiciona espaço */}
-        </span>
-      ))}
+        return (
+          <span
+            key={wordIndex}
+            className={cn('inline-block', isHighlighted && highlightClassName)}
+          >
+            {word.split('').map((letter) => {
+              const currentLetterIndex = letterIndex++;
+              return (
+                <span
+                  key={`${letter}-${currentLetterIndex}`}
+                  className={'animate-cascade-in inline-block'}
+                  style={{ animationDelay: `${currentLetterIndex * stagger}s` }}
+                >
+                  {letter}
+                </span>
+              );
+            })}
+            {wordIndex < words.length - 1 && '\u00A0'}{' '}
+            {/* Adiciona espaço */}
+          </span>
+        );
+      })}
     </span>
   );
 };
