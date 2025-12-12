@@ -12,12 +12,13 @@ const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
     return Array.from({ length: count }).map((_, i) => {
       // Create a more structured distribution
       const angle = (i / count) * 2 * Math.PI + Math.random() * 0.5; // Add some randomness to angle
-      const radius = (Math.random() * 0.45 + 0.05) * 100; // 5% to 50% from center
+      const radius = (Math.random() * 0.8 + 0.1) * 100; // 10% to 90% from center to spread them more
       
       // Convert polar coordinates to cartesian, centered at (50, 50)
       // and allow them to go slightly off-screen
       const left = 50 + radius * Math.cos(angle);
-      const top = 50 + radius * Math.sin(angle) * 1.5; // Stretch vertically
+      // Adjust top position to be lower on the screen, avoiding the header
+      const top = 20 + radius * Math.sin(angle) * 0.8; 
 
       return {
         id: i,
