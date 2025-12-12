@@ -4,7 +4,11 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section id="home" className="relative pt-64 pb-24 sm:pt-72 sm:pb-32 lg:pt-80 lg:pb-40 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-full bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#2A3A5A,rgba(255,255,255,0))] -z-10"></div>
+      {/* Fundo para mobile */}
+      <div className="absolute top-0 left-0 right-0 h-full bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#4A5A7A,rgba(255,255,255,0))] -z-10 sm:hidden"></div>
+      {/* Fundo para desktop */}
+      <div className="absolute top-0 left-0 right-0 h-full hidden sm:block bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#2A3A5A,rgba(255,255,255,0))] -z-10"></div>
+      
       <div className="absolute inset-0 -z-20 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-background"></div>
       <div className="container relative z-10 text-center">
