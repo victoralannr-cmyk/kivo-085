@@ -12,26 +12,10 @@ const HeroSection = () => {
       <div className="container relative z-10 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
           <CascadingLetters
-            text="Impulsionamos"
-            highlightedWords={['Impulsionamos']}
+            text="Impulsionamos sua empresa para o topo com modelos preditivos de conversão"
+            highlightedWords={['Impulsionamos', 'para', 'preditivos', 'de', 'conversão']}
             highlightClassName="text-wavy-gradient"
             stagger={0.02}
-          />
-          {' sua empresa '}
-          <CascadingLetters
-            text="para"
-            highlightedWords={['para']}
-            highlightClassName="text-wavy-gradient"
-            stagger={0.02}
-            baseDelay={12 * 0.02} // "Impulsionamos " (12) + "sua empresa " (12)
-          />
-          {' o topo com modelos '}
-          <CascadingLetters
-            text="preditivos de conversão"
-            highlightedWords={['preditivos', 'de', 'conversão']}
-            highlightClassName="text-wavy-gradient"
-            stagger={0.02}
-            baseDelay={24 * 0.02}
           />
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">

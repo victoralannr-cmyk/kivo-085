@@ -55,8 +55,9 @@ const CascadingLetters = ({
           </span>
         );
 
+        // Add a space after each word except the last one
         if (wordIndex < words.length - 1) {
-          letterIndex++; // Account for space
+          letterIndex++; // Account for the space character in staggering
           return (
             <span key={wordIndex}>
               {wordSpan}
