@@ -1,11 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, DollarSign, Code, Video } from "lucide-react";
+import { DollarSign, Code, Video } from "lucide-react";
+import AnimatedUsersIcon from "../ui/animated-users-icon";
 
 const services = [
   {
-    icon: (
-        <Users className="h-10 w-10 animate-orbital-wobble text-primary/80" style={{ animationDelay: '0s' }} />
-    ),
+    icon: <AnimatedUsersIcon className="h-10 w-10 text-primary/80" />,
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
   },
