@@ -10,8 +10,6 @@ type FloatingLogosProps = {
 const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
   const logos = useMemo(() => {
     return Array.from({ length: count }).map((_, i) => {
-      const angle = Math.random() * 2 * Math.PI;
-      
       // Determine if the logo should be on the left or right side, avoiding the center
       const isLeftSide = Math.random() > 0.5;
       const horizontalPosition = isLeftSide 
