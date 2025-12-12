@@ -10,21 +10,22 @@ type FloatingLogosProps = {
 const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
   const logos = useMemo(() => {
     return Array.from({ length: count }).map((_, i) => {
-      // Create a more structured distribution
-      const angle = (i / count) * 2 * Math.PI + Math.random() * 0.5; // Add some randomness to angle
-      const radius = (Math.random() * 0.8 + 0.1) * 100; // 10% to 90% from center to spread them more
+      const angle = Math.random() * 2 * Math.PI;
       
-      // Convert polar coordinates to cartesian, centered at (50, 50)
-      // and allow them to go slightly off-screen
-      const left = 50 + radius * Math.cos(angle);
-      // Adjust top position to be lower on the screen, avoiding the header
-      const top = 20 + radius * Math.sin(angle) * 0.8; 
+      // Determine if the logo should be on the left or right side, avoiding the center
+      const isLeftSide = Math.random() > 0.5;
+      const horizontalPosition = isLeftSide 
+        ? Math.random() * 30 // 0% to 30% from the left
+        : 70 + Math.random() * 30; // 70% to 100% from the left
+
+      // Keep vertical position somewhat random but concentrated in the upper-mid part of the screen
+      const verticalPosition = 15 + Math.random() * 70; // 15% to 85% from the top
 
       return {
         id: i,
         src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
-        top: `${top}%`,
-        left: `${left}%`,
+        top: `${verticalPosition}%`,
+        left: `${horizontalPosition}%`,
         animationDuration: `${Math.random() * 8 + 7}s`,
         animationDelay: `${Math.random() * 8}s`,
         size: Math.random() * 40 + 40,
