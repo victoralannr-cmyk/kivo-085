@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import FloatingLogos from "../ui/floating-logos";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-12 sm:py-16 bg-background">
-      <div className="container text-center">
+    <section id="contato" className="relative py-12 sm:py-16 bg-background overflow-hidden">
+      <FloatingLogos count={15} />
+      <div className="container text-center relative z-10">
         <h2 className="font-headline text-3xl font-bold sm:text-4xl">Vamos conversar?</h2>
         <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
           Entre em contato para agendar uma demonstração.
