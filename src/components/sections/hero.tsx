@@ -15,6 +15,7 @@ const HeroSection = () => {
             text="Impulsionamos sua empresa para o topo com modelos preditivos de conversão"
             highlightedWords={['Impulsionamos', 'para', 'preditivos', 'de', 'conversão']}
             highlightClassName="text-wavy-gradient"
+            stagger={0.02}
           />
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
