@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section id="home" className="relative pt-80 pb-24 sm:pt-80 sm:pb-32 lg:pt-96 lg:pb-40">
-      <div className="absolute top-0 left-0 w-full h-full aurora-background -z-10"></div>
+      <div className="absolute top-40 left-0 w-full h-full aurora-background -z-10"></div>
       
       <div className="absolute inset-0 -z-20 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-background"></div>

@@ -98,7 +98,7 @@
     background: radial-gradient(ellipse 80% 50% at 50% -20%, #1A237E90, transparent),
                 radial-gradient(ellipse 50% 40% at 20% -15%, #4285F470, transparent),
                 radial-gradient(ellipse 50% 40% at 80% -15%, #4285F470, transparent);
-    animation: aurora-animation 10s ease-in-out infinite alternate;
+    animation: aurora-animation 10s ease-in-out infinite;
   }
 }
 
@@ -160,15 +160,15 @@
 
 @keyframes aurora-animation {
     0% {
-        background-position: 50% -20%, 10% -10%, 90% -10%;
+        background-position: 50% -20%, 20% -15%, 80% -15%;
         opacity: 0.6;
     }
     50% {
-        background-position: 50% 0%, 35% 5%, 65% 5%;
+        background-position: 50% -10%, 40% 0%, 60% 0%;
         opacity: 1;
     }
     100% {
-        background-position: 50% -20%, 10% -10%, 90% -10%;
+        background-position: 50% -20%, 20% -15%, 80% -15%;
         opacity: 0.6;
     }
 }
