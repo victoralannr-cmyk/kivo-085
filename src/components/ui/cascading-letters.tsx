@@ -8,6 +8,7 @@ type CascadingLettersProps = {
   stagger?: number;
   highlightedWords?: string[];
   highlightClassName?: string;
+  baseDelay?: number;
 };
 
 const CascadingLetters = ({
@@ -16,6 +17,7 @@ const CascadingLetters = ({
   stagger = 0.05,
   highlightedWords = [],
   highlightClassName = '',
+  baseDelay = 0,
 }: CascadingLettersProps) => {
   const words = text.split(' ');
 
@@ -29,10 +31,12 @@ const CascadingLetters = ({
             word.toLowerCase().replace(/[.,]/g, '') === hWord.toLowerCase()
         );
 
-        return (
+        const wordSpan = (
           <span
-            key={wordIndex}
-            className={cn('inline-block', isHighlighted && highlightClassName)}
+            className={cn(
+              'inline-block',
+              isHighlighted && highlightClassName
+            )}
           >
             {word.split('').map((letter) => {
               const currentLetterIndex = letterIndex++;
@@ -40,16 +44,28 @@ const CascadingLetters = ({
                 <span
                   key={`${letter}-${currentLetterIndex}`}
                   className={'animate-cascade-in inline-block'}
-                  style={{ animationDelay: `${currentLetterIndex * stagger}s` }}
+                  style={{
+                    animationDelay: `${baseDelay + currentLetterIndex * stagger}s`,
+                  }}
                 >
                   {letter}
                 </span>
               );
             })}
-            {wordIndex < words.length - 1 && '\u00A0'}{' '}
-            {/* Adiciona espaço */}
           </span>
         );
+
+        if (wordIndex < words.length - 1) {
+          letterIndex++; // Account for space
+          return (
+            <span key={wordIndex}>
+              {wordSpan}
+              {'\u00A0'}{' '}
+            </span>
+          );
+        }
+        
+        return wordSpan;
       })}
     </span>
   );
