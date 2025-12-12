@@ -33,7 +33,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased', poppins.variable)}>
+      <body className={cn('font-body antialiased overflow-x-hidden', poppins.variable)}>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
