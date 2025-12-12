@@ -47,7 +47,7 @@ const stats = [
 const FaqSection = () => {
   return (
     <section id="faq" className="relative overflow-hidden py-24 sm:py-32 bg-background">
-      <div className="container max-w-4xl mx-auto">
+      <div className="container max-w-4xl mx-auto relative">
         <div className="text-center mb-16">
           <div className="mb-16">
             <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
