@@ -4,7 +4,7 @@ import { Users, DollarSign, Code, Video } from "lucide-react";
 const services = [
   {
     icon: (
-        <Users className="h-10 w-10 animate-float text-primary/80" style={{ animationDelay: '0s' }} />
+        <Users className="h-10 w-10 animate-orbital-wobble text-primary/80" style={{ animationDelay: '0s' }} />
     ),
     title: "Social Media",
     description: "Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.",
@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: (
-        <Code className="h-10 w-10 animate-float text-primary/80" style={{ animationDelay: '0.4s' }} />
+        <Code className="h-10 w-10 animate-code-pulse text-primary/80" style={{ animationDelay: '0.4s' }} />
     ),
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",

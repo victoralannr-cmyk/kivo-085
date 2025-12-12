@@ -7,17 +7,19 @@ type FloatingLogosProps = {
   count?: number;
 }
 
-const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
+const FloatingLogos = ({ count = 15 }: FloatingLogosProps) => {
   const logos = useMemo(() => {
     return Array.from({ length: count }).map((_, i) => {
+      const size = Math.random() * 40 + 20; // 20px to 60px
+      const side = Math.random() < 0.5 ? 'left' : 'right';
       return {
         id: i,
         src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
         top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        animationDuration: `${Math.random() * 8 + 7}s`,
-        animationDelay: `${Math.random() * 8}s`,
-        size: Math.random() * 40 + 40,
+        left: side === 'left' ? `${Math.random() * 30}%` : `${70 + Math.random() * 30}%`,
+        animationDuration: `${Math.random() * 10 + 10}s`,
+        animationDelay: `${Math.random() * 10}s`,
+        size: size,
       };
     });
   }, [count]);

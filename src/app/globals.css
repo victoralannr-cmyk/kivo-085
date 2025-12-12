@@ -72,7 +72,7 @@
   }
 
   .text-wavy-gradient {
-    @apply bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-flow;
   }
 
   .btn-shine {
@@ -118,6 +118,22 @@
 @keyframes pulse-light {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.03); }
+}
+
+@keyframes orbital-wobble {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+@keyframes code-pulse {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.05) translateX(5px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+@keyframes spin-3d {
+    from { transform: rotate3d(.5,.5,.5, 360deg); }
+    to { transform: rotate3d(0deg); }
 }
 
 @keyframes camera-flash {

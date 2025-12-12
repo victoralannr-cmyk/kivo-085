@@ -8,7 +8,6 @@ import AnimatedCounter from "@/components/ui/animated-counter";
 import { ArrowDown, Users, Code2, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import FloatingLogos from "../ui/floating-logos";
 
 const faqItems = [
   {
@@ -46,8 +45,8 @@ const stats = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="relative overflow-hidden py-24 sm:py-32 bg-background">
-      <div className="container max-w-4xl mx-auto relative">
+    <section id="faq" className="overflow-hidden py-24 sm:py-32 bg-background">
+      <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-16">
             <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
@@ -124,7 +123,7 @@ const FaqSection = () => {
             </p>
             <div className="mt-8">
               <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
-                <Link href="#">Faça acontecer</Link>
+                <Link href="#contato">Faça acontecer</Link>
               </Button>
             </div>
           </div>
