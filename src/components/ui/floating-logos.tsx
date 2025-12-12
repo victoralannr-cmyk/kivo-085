@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 
 const FloatingLogos = () => {
   const logos = useMemo(() => {
-    const numLogos = 15;
+    const numLogos = 30;
     return Array.from({ length: numLogos }).map((_, i) => {
       // Create a more structured distribution
       const angle = (i / numLogos) * 2 * Math.PI;
