@@ -37,7 +37,7 @@ const FloatingLogos = () => {
           alt="Floating logo"
           width={logo.size}
           height={logo.size}
-          className="animate-float absolute opacity-5"
+          className="animate-float absolute opacity-10"
           style={{
             top: logo.top,
             left: logo.left,
