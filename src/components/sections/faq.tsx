@@ -47,7 +47,6 @@ const stats = [
 const FaqSection = () => {
   return (
     <section id="faq" className="relative overflow-hidden py-24 sm:py-32 bg-background">
-      <FloatingLogos count={5} />
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-16">
