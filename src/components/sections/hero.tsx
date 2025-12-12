@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Fundo para mobile */}
       <div className="absolute top-0 left-0 right-0 h-full bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#5a6a8a,rgba(255,255,255,0))] -z-10 sm:hidden"></div>
       {/* Fundo para desktop */}
-      <div className="absolute top-0 left-0 right-0 h-full hidden sm:block bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#3a4a6a,rgba(255,255,255,0))] -z-10"></div>
+      <div className="absolute top-0 left-0 right-0 h-full hidden sm:block bg-[radial-gradient(ellipse_50%_50%_at_50%_-20%,#5a6a8a,rgba(255,255,255,0))] -z-10"></div>
       
       <div className="absolute inset-0 -z-20 h-full w-full grid-bg"></div>
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-background"></div>
