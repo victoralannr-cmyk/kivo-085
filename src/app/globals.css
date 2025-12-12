@@ -95,7 +95,7 @@
   }
 
   .animate-cascade-in {
-    animation: cascade-in 0.8s backwards;
+    animation: cascade-in 0.8s both;
     display: inline-block;
   }
 }
@@ -147,12 +147,12 @@
 }
 
 @keyframes cascade-in {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(-20px) scale(0.8);
+    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
