@@ -10,51 +10,56 @@ type AnimatedCounterProps = {
 const AnimatedCounter = ({ to, duration = 2000 }: AnimatedCounterProps) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  
+  const animationFrameId = useRef<number>();
+
   const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    
-    let animationFrameId: number;
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           let startTime: number | null = null;
-          
+
           const animate = (timestamp: number) => {
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
             const percentage = Math.min(progress / duration, 1);
             const easedPercentage = easeOutCubic(percentage);
-            
+
             setCount(Math.floor(easedPercentage * to));
-            
+
             if (progress < duration) {
-              animationFrameId = requestAnimationFrame(animate);
+              animationFrameId.current = requestAnimationFrame(animate);
             } else {
               setCount(to);
             }
           };
-          
-          animationFrameId = requestAnimationFrame(animate);
-          observer.unobserve(element);
+
+          animationFrameId.current = requestAnimationFrame(animate);
+        } else {
+          // Reset when not intersecting
+          if (animationFrameId.current) {
+            cancelAnimationFrame(animationFrameId.current);
+          }
+          setCount(0);
         }
       },
       { threshold: 0.1 }
     );
 
     observer.observe(element);
-    
+
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      if(element) {
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
+      if (element) {
         observer.unobserve(element);
       }
     };
-
   }, [to, duration]);
 
   return <span ref={ref}>{count}</span>;
