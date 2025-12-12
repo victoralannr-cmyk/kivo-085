@@ -161,7 +161,7 @@
 @keyframes aurora-animation {
     0% {
         background-position: 50% -20%, 10% -10%, 90% -10%;
-        opacity: 0.7;
+        opacity: 0.6;
     }
     50% {
         background-position: 50% 0%, 35% 5%, 65% 5%;
@@ -169,6 +169,6 @@
     }
     100% {
         background-position: 50% -20%, 10% -10%, 90% -10%;
-        opacity: 0.7;
+        opacity: 0.6;
     }
 }
