@@ -11,13 +11,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-transparent via-transparent to-background"></div>
       <div className="container relative z-10 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-          <CascadingLetters text="Impulsionamos" className="text-wavy-gradient" />
-          {' '}
-          sua empresa{' '}
-          <CascadingLetters text="para" className="text-wavy-gradient" />
-          {' '}
-          o topo com modelos{' '}
-          <CascadingLetters text="preditivos de conversão" className="text-wavy-gradient" />
+          <span className="text-wavy-gradient">Impulsionamos</span> sua empresa para o topo com modelos <span className="text-wavy-gradient">preditivos de conversão</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
           e mantemos você dominante, relevante e sempre{' '}
