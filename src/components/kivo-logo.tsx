@@ -6,9 +6,9 @@ const KivoLogo = ({ className }: { className?: string }) => {
     <Image
       src="https://i.postimg.cc/K8MgDrs5/Captura-de-tela-2025-11-27-221300-removebg-preview.png"
       alt="Kivo Logo"
-      width={84}
-      height={24}
-      className={cn('h-6 w-auto', className)}
+      width={168}
+      height={48}
+      className={cn('h-12 w-auto', className)}
       priority
     />
   );
