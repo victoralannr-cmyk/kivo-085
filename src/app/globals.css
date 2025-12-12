@@ -93,6 +93,13 @@
   .animate-pulse-light {
     animation: pulse-light 2s infinite;
   }
+  
+  .aurora-background {
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, #1A237E40, transparent),
+                radial-gradient(ellipse 50% 40% at 20% -15%, #4285F430, transparent),
+                radial-gradient(ellipse 50% 40% at 80% -15%, #4285F430, transparent);
+    animation: aurora-animation 12s ease-in-out infinite alternate;
+  }
 }
 
 @keyframes float {
@@ -149,4 +156,19 @@
 @keyframes head-float-2 {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-4px); }
+}
+
+@keyframes aurora-animation {
+    0% {
+        background-position: 50% -20%, 20% -15%, 80% -15%;
+        opacity: 0.6;
+    }
+    50% {
+        background-position: 50% -10%, 30% -5%, 70% -5%;
+        opacity: 0.9;
+    }
+    100% {
+        background-position: 50% -20%, 20% -15%, 80% -15%;
+        opacity: 0.6;
+    }
 }
