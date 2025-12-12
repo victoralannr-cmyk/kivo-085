@@ -3,18 +3,21 @@
 import Image from 'next/image';
 import { useMemo } from 'react';
 
-const FloatingLogos = () => {
+type FloatingLogosProps = {
+  count?: number;
+}
+
+const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
   const logos = useMemo(() => {
-    const numLogos = 30;
-    return Array.from({ length: numLogos }).map((_, i) => {
+    return Array.from({ length: count }).map((_, i) => {
       // Create a more structured distribution
-      const angle = (i / numLogos) * 2 * Math.PI;
-      const radius = (Math.random() * 0.4 + 0.1) * 100; // 10% to 50% from center
+      const angle = (i / count) * 2 * Math.PI + Math.random() * 0.5; // Add some randomness to angle
+      const radius = (Math.random() * 0.45 + 0.05) * 100; // 5% to 50% from center
       
       // Convert polar coordinates to cartesian, centered at (50, 50)
       // and allow them to go slightly off-screen
-      const left = 50 + radius * Math.cos(angle) + (Math.random() - 0.5) * 30;
-      const top = 50 + radius * Math.sin(angle) * 2 + (Math.random() - 0.5) * 30; // Stretch vertically
+      const left = 50 + radius * Math.cos(angle);
+      const top = 50 + radius * Math.sin(angle) * 1.5; // Stretch vertically
 
       return {
         id: i,
@@ -26,7 +29,7 @@ const FloatingLogos = () => {
         size: Math.random() * 40 + 40,
       };
     });
-  }, []);
+  }, [count]);
 
   return (
     <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
