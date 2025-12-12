@@ -141,14 +141,12 @@
   50% { filter: brightness(1.8) drop-shadow(0 0 15px hsl(var(--primary) / 0.7)); }
 }
 
-@keyframes head-wobble-1 {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-8deg); }
-  75% { transform: rotate(8deg); }
+@keyframes head-float-1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
 }
 
-@keyframes head-wobble-2 {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(8deg); }
-  75% { transform: rotate(-8deg); }
+@keyframes head-float-2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
 }

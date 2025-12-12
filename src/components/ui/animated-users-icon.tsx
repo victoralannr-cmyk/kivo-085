@@ -17,13 +17,13 @@ const AnimatedUsersIcon = ({ className }: { className?: string }) => {
       <style>
         {`
           .head-1 {
-            animation: head-wobble-1 3s ease-in-out infinite;
-            transform-origin: 9px 7px;
+            animation: head-float-1 2s ease-in-out infinite;
+            transform-origin: center;
           }
           .head-2 {
-            animation: head-wobble-2 3s ease-in-out infinite;
-            animation-delay: 0.3s;
-            transform-origin: 18px 7px;
+            animation: head-float-2 2s ease-in-out infinite;
+            animation-delay: 0.5s;
+            transform-origin: center;
           }
         `}
       </style>
