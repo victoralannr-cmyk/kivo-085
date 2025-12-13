@@ -17,7 +17,14 @@ const services = [
   },
   {
     icon: (
-        <Code className="h-10 w-10 animate-code-pulse text-primary/80" style={{ animationDelay: '0.4s' }} />
+      <div className="relative h-10 w-10">
+        <Code className="h-10 w-10 text-primary/80" />
+        <div className="absolute inset-0 flex flex-col justify-center items-center overflow-hidden">
+          <span className="code-line line-1 h-1 w-4 bg-accent/70 rounded-full"></span>
+          <span className="code-line line-2 h-1 w-6 bg-accent/70 rounded-full mt-1"></span>
+          <span className="code-line line-3 h-1 w-3 bg-accent/70 rounded-full mt-1"></span>
+        </div>
+      </div>
     ),
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",

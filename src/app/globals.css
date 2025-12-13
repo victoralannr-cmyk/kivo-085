@@ -100,6 +100,13 @@
                 radial-gradient(ellipse 50% 40% at 80% -15%, #4285F470, transparent);
     animation: aurora-animation 10s ease-in-out infinite;
   }
+
+  .code-line {
+    display: block;
+    animation: code-line-animation 3s infinite;
+  }
+  .code-line.line-2 { animation-delay: 0.2s; }
+  .code-line.line-3 { animation-delay: 0.4s; }
 }
 
 @keyframes float {
@@ -171,4 +178,11 @@
         background-position: 50% -20%, 20% -15%, 80% -15%;
         opacity: 0.6;
     }
+}
+
+@keyframes code-line-animation {
+  0% { transform: translateX(-150%); opacity: 0; }
+  20% { transform: translateX(0); opacity: 1; }
+  80% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(150%); opacity: 0; }
 }
