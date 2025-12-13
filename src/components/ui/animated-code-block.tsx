@@ -10,6 +10,7 @@ const AnimatedCodeBlock = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        // Reset animation when it's not intersecting
         setIsIntersecting(entry.isIntersecting);
       },
       { threshold: 0.1 }
@@ -31,7 +32,7 @@ const AnimatedCodeBlock = () => {
     <div
       ref={ref}
       className={cn(
-        'relative h-10 w-10 rounded-sm bg-primary/10 overflow-hidden border border-primary/20 flex flex-col justify-center items-start p-1.5'
+        'relative h-10 w-10 rounded-sm bg-primary/5 overflow-hidden border border-primary/10 flex flex-col justify-center items-start p-1.5'
       )}
     >
       <div className="w-full space-y-1">
