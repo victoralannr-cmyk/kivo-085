@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 import { Database, MessageSquare, Users } from 'lucide-react';
-import AnimatedCodeEditor from './animated-code-editor';
+import AnimatedCodeBlock from './animated-code-block';
 
 const FirebaseAnimatedCard = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,8 +43,8 @@ const FirebaseAnimatedCard = () => {
             <path className="connection-line line-bottom" d="M 210 175 C 280 175, 330 280, 420 280" />
         </svg>
 
-        <div className="z-20 flex-shrink-0 flex justify-center items-center">
-          <AnimatedCodeEditor />
+        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[88px]">
+            <AnimatedCodeBlock />
         </div>
 
       <div className="z-20 flex flex-col justify-center h-full w-full md:w-auto space-y-4">

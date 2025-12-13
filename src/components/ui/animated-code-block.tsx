@@ -31,27 +31,27 @@ const AnimatedCodeBlock = () => {
     <div
       ref={ref}
       className={cn(
-        'relative h-10 w-10 rounded-sm bg-primary/5 overflow-hidden border border-primary/10 flex flex-col justify-center items-start p-1.5'
+        'relative h-20 w-20 rounded-lg bg-primary/5 overflow-hidden border border-primary/10 flex flex-col justify-center items-start p-3'
       )}
     >
-      <div className="w-full space-y-1">
+      <div className="w-full space-y-2">
         <span
           className={cn(
-            'block h-1 w-6 rounded-full bg-accent/70',
+            'block h-1.5 w-10 rounded-full bg-accent/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.2s' }}
         ></span>
         <span
           className={cn(
-            'block h-1 w-8 rounded-full bg-primary/70',
+            'block h-1.5 w-14 rounded-full bg-primary/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.4s' }}
         ></span>
         <span
           className={cn(
-            'block h-1 w-5 rounded-full bg-green-500/70',
+            'block h-1.5 w-8 rounded-full bg-green-500/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.6s' }}
