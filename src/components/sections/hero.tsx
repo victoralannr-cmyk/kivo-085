@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AnimateOnScroll from "../ui/animate-on-scroll";
 
 const HeroSection = () => {
   const titleWords = [
@@ -16,7 +17,6 @@ const HeroSection = () => {
     { text: "conversão", isGradient: true },
   ];
 
-  // Separa as palavras para animar as brancas primeiro
   const whiteWords = titleWords.filter(w => !w.isGradient);
   const gradientWords = titleWords.filter(w => w.isGradient);
 
@@ -25,9 +25,13 @@ const HeroSection = () => {
     if (word.isGradient) {
       animationIndex = whiteWords.length + gradientWords.findIndex(gw => gw.text === word.text);
     } else {
-      animationIndex = whiteWords.findIndex(ww => ww.text === word.text && titleWords.findIndex(tw => tw.text === ww.text) === index);
+      // Handle potential duplicate white words
+      const occurrences = whiteWords.map((w, i) => w.text === word.text ? i : -1).filter(i => i !== -1);
+      const titleOccurrences = titleWords.map((w, i) => w.text === word.text && !w.isGradient ? i : -1).filter(i => i !== -1);
+      const occurrenceIndex = titleOccurrences.indexOf(index);
+      animationIndex = occurrences[occurrenceIndex];
     }
-    return `${animationIndex * 0.1}s`;
+    return animationIndex * 100;
   });
 
   return (
@@ -39,29 +43,33 @@ const HeroSection = () => {
       <div className="container relative z-10 text-center">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
           {titleWords.map((word, index) => (
-            <span
+            <AnimateOnScroll
               key={index}
-              className="inline-block animate-fade-in-down"
-              style={{ animationDelay: animationDelays[index] }}
+              delay={animationDelays[index]}
+              className="inline-block"
             >
               <span className={word.isGradient ? "text-wavy-gradient" : ""}>
                 {word.text}
               </span>
               {' '}
-            </span>
+            </AnimateOnScroll>
           ))}
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80 animate-fade-in-down" style={{ animationDelay: `${titleWords.length * 0.1 + 0.2}s` }}>
-          e mantemos você dominante, relevante e sempre{' '}
-          <span className="text-wavy-gradient font-semibold">
-            acima da concorrência.
-          </span>
-        </p>
-        <div className="mt-10 animate-fade-in-down" style={{ animationDelay: `${titleWords.length * 0.1 + 0.4}s` }}>
-          <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
-            <Link href="#contato">Agendar uma Demonstração</Link>
-          </Button>
-        </div>
+        <AnimateOnScroll delay={titleWords.length * 100 + 200}>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
+            e mantemos você dominante, relevante e sempre{' '}
+            <span className="text-wavy-gradient font-semibold">
+              acima da concorrência.
+            </span>
+          </p>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={titleWords.length * 100 + 400}>
+          <div className="mt-10">
+            <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
+              <Link href="#contato">Agendar uma Demonstração</Link>
+            </Button>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import AnimatedCounter from "@/components/ui/animated-counter";
 import { ArrowDown, Users, Code2, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import AnimateOnScroll from "../ui/animate-on-scroll";
 
 const faqItems = [
   {
@@ -51,96 +52,114 @@ const FaqSection = () => {
           <div className="mb-16">
             <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
               {stats.map((stat, index) => (
-                <div key={stat.label} className="flex flex-col items-center animate-fade-in-down" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="font-headline text-5xl font-bold flex">
-                    <span className="text-wavy-gradient">
-                      {stat.prefix}
-                      <AnimatedCounter to={stat.value} />
-                    </span>
+                <AnimateOnScroll key={stat.label} delay={index * 200}>
+                  <div className="flex flex-col items-center">
+                    <div className="font-headline text-5xl font-bold flex">
+                      <span className="text-wavy-gradient">
+                        {stat.prefix}
+                        <AnimatedCounter to={stat.value} />
+                      </span>
+                    </div>
+                    <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
                   </div>
-                  <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
-                </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
 
-          <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4 animate-fade-in-down" style={{ animationDelay: '0.6s' }}>
-            Tráfego{' '}
-            <span className="text-wavy-gradient">
-              colocam o seu negócio à frente dos
-            </span>{' '}
-            olhares certos.{' '}
-            O seu posicionamento{' '}
-            <span className="text-wavy-gradient">
-              é a sua vitrine digital!
-            </span>
-          </p>
-          
-          <div className="flex justify-center my-8 animate-fade-in-down" style={{ animationDelay: '0.8s' }}>
-            <ArrowDown className="h-16 w-16 text-white animate-bounce" />
-          </div>
-
-          <div className="flex flex-col items-center gap-4 my-8 animate-fade-in-down" style={{ animationDelay: '1s' }}>
-            <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
-              <p className="font-semibold text-foreground">Estratégias de Vendas</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col items-center gap-6 mt-12 animate-fade-in-down" style={{ animationDelay: '1.2s' }}>
-            <div className="relative flex h-32 w-32 items-center justify-center">
-              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
-              <Users className="h-16 w-16 animate-orbital-wobble text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
-            </div>
-            <p className="max-w-3xl text-lg text-muted-foreground">
-              Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
+          <AnimateOnScroll delay={600}>
+            <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
+              Tráfego{' '}
+              <span className="text-wavy-gradient">
+                colocam o seu negócio à frente dos
+              </span>{' '}
+              olhares certos.{' '}
+              O seu posicionamento{' '}
+              <span className="text-wavy-gradient">
+                é a sua vitrine digital!
+              </span>
             </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-6 mt-16 animate-fade-in-down" style={{ animationDelay: '1.4s' }}>
-            <div className="relative flex h-32 w-32 items-center justify-center">
-              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
-              <Code2 className="h-16 w-16 animate-code-pulse text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
-            </div>
-            <h3 className="font-headline text-2xl font-bold mt-4">Criação de Sites</h3>
-            <p className="max-w-3xl text-lg text-muted-foreground">
-            Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-6 mt-16 animate-fade-in-down" style={{ animationDelay: '1.6s' }}>
-            <div className="relative flex h-32 w-32 items-center justify-center">
-              <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
-              <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
-            </div>
-            <h3 className="font-headline text-2xl font-bold mt-4">Setor Criativo</h3>
-            <div className="flex gap-4 text-muted-foreground">
-              <span>Planejamento</span>
-              <span>Roteirização</span>
-              <span>Produção</span>
-            </div>
-            <p className="max-w-3xl text-lg text-muted-foreground">
-            Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
-            </p>
-            <div className="mt-8">
-              <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
-                <Link href="#contato">Faça acontecer</Link>
-              </Button>
-            </div>
-          </div>
+          </AnimateOnScroll>
           
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-24 animate-fade-in-down" style={{ animationDelay: '1.8s' }}>Perguntas Frequentes</h2>
+          <AnimateOnScroll delay={800}>
+            <div className="flex justify-center my-8">
+              <ArrowDown className="h-16 w-16 text-white animate-bounce" />
+            </div>
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll delay={1000}>
+            <div className="flex flex-col items-center gap-4 my-8">
+              <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
+                <p className="font-semibold text-foreground">Estratégias de Vendas</p>
+              </div>
+            </div>
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll delay={1200}>
+            <div className="flex flex-col items-center gap-6 mt-12">
+              <div className="relative flex h-32 w-32 items-center justify-center">
+                <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+                <Users className="h-16 w-16 animate-orbital-wobble text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+              </div>
+              <p className="max-w-3xl text-lg text-muted-foreground">
+                Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
+              </p>
+            </div>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll delay={200}>
+            <div className="flex flex-col items-center gap-6 mt-16">
+              <div className="relative flex h-32 w-32 items-center justify-center">
+                <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+                <Code2 className="h-16 w-16 animate-code-pulse text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+              </div>
+              <h3 className="font-headline text-2xl font-bold mt-4">Criação de Sites</h3>
+              <p className="max-w-3xl text-lg text-muted-foreground">
+              Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.
+              </p>
+            </div>
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll delay={200}>
+            <div className="flex flex-col items-center gap-6 mt-16">
+              <div className="relative flex h-32 w-32 items-center justify-center">
+                <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
+                <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
+              </div>
+              <h3 className="font-headline text-2xl font-bold mt-4">Setor Criativo</h3>
+              <div className="flex gap-4 text-muted-foreground">
+                <span>Planejamento</span>
+                <span>Roteirização</span>
+                <span>Produção</span>
+              </div>
+              <p className="max-w-3xl text-lg text-muted-foreground">
+              Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
+              </p>
+              <div className="mt-8">
+                <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
+                  <Link href="#contato">Faça acontecer</Link>
+                </Button>
+              </div>
+            </div>
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll>
+            <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-24">Perguntas Frequentes</h2>
+          </AnimateOnScroll>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
-            <AccordionItem value={`item-${index + 1}`} key={index} className="animate-fade-in-down" style={{ animationDelay: `${2 + index * 0.2}s` }}>
-              <AccordionTrigger className="text-left text-lg hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
+            <AnimateOnScroll key={index} delay={index * 200}>
+                <AccordionItem value={`item-${index + 1}`} >
+                <AccordionTrigger className="text-left text-lg hover:no-underline">
+                    {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                    {item.answer}
+                </AccordionContent>
+                </AccordionItem>
+            </AnimateOnScroll>
           ))}
         </Accordion>
       </div>

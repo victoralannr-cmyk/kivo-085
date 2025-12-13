@@ -1,23 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import AnimateOnScroll from "../ui/animate-on-scroll";
 
 const ContactSection = () => {
   return (
     <section id="contato" className="py-12 sm:py-16 bg-background overflow-hidden">
       <div className="container text-center">
-        <h2 className="font-headline text-3xl font-bold sm:text-4xl animate-fade-in-down">Vamos conversar?</h2>
-        <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground animate-fade-in-down" style={{ animationDelay: '0.2s' }}>
-          Entre em contato para agendar uma demonstração.
-        </p>
-        <div className="flex justify-center my-8 animate-fade-in-down" style={{ animationDelay: '0.4s' }}>
-          <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
-        </div>
-        <div className="mt-10 animate-fade-in-down" style={{ animationDelay: '0.6s' }}>
-          <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
-            <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">Fale com um especialista</Link>
-          </Button>
-        </div>
+        <AnimateOnScroll>
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl">Vamos conversar?</h2>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={200}>
+          <p className="mt-4 max-w-xl mx-auto text-lg text-muted-foreground">
+            Entre em contato para agendar uma demonstração.
+          </p>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={400}>
+          <div className="flex justify-center my-8">
+            <ArrowDown width={59.21} height={120} className="text-white animate-bounce" />
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={600}>
+          <div className="mt-10">
+            <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
+              <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">Fale com um especialista</Link>
+            </Button>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

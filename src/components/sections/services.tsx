@@ -3,6 +3,7 @@ import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
 import AnimatedCodeEditor from "../ui/animated-code-editor";
 import { cn } from "@/lib/utils";
+import AnimateOnScroll from "../ui/animate-on-scroll";
 
 const services = [
   {
@@ -23,7 +24,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Video className={cn("h-10 w-10 text-primary/80 btn-shine")} style={{ animationDelay: '0.6s' }} />,
+    icon: <Video className={cn("h-10 w-10 text-primary/80 relative overflow-hidden btn-shine")} style={{ animationDelay: '0.6s' }} />,
     title: "Criação de conteúdo Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
@@ -34,26 +35,32 @@ const ServicesSection = () => {
     <section id="servicos" className="py-24 sm:py-32">
       <div className="container">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl animate-fade-in-down">Nossos Serviços</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground animate-fade-in-down" style={{ animationDelay: '0.2s' }}>
-            Entenda como iremos impulsionar sua empresa através da internet
-          </p>
+          <AnimateOnScroll>
+            <h2 className="font-headline text-3xl font-bold sm:text-4xl">Nossos Serviços</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll delay={200}>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              Entenda como iremos impulsionar sua empresa através da internet
+            </p>
+          </AnimateOnScroll>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <Card key={service.title} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl animate-fade-in-down" style={{ animationDelay: `${0.4 + index * 0.2}s` }}>
-              <CardHeader className="items-center text-center">
-                {service.icon && (
-                  <div className="flex items-center justify-center h-[88px]">
-                    {service.icon}
-                  </div>
-                )}
-                <CardTitle className="mt-4">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow flex flex-col text-center">
-                <p className="text-muted-foreground flex-grow">{service.description}</p>
-              </CardContent>
-            </Card>
+            <AnimateOnScroll key={service.title} delay={400 + index * 200}>
+              <Card className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl h-full">
+                <CardHeader className="items-center text-center">
+                  {service.icon && (
+                    <div className="flex items-center justify-center h-[88px]">
+                      {service.icon}
+                    </div>
+                  )}
+                  <CardTitle className="mt-4">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow flex flex-col text-center">
+                  <p className="text-muted-foreground flex-grow">{service.description}</p>
+                </CardContent>
+              </Card>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
