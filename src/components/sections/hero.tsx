@@ -16,6 +16,20 @@ const HeroSection = () => {
     { text: "conversão", isGradient: true },
   ];
 
+  // Separa as palavras para animar as brancas primeiro
+  const whiteWords = titleWords.filter(w => !w.isGradient);
+  const gradientWords = titleWords.filter(w => w.isGradient);
+
+  const animationDelays = titleWords.map((word, index) => {
+    let animationIndex;
+    if (word.isGradient) {
+      animationIndex = whiteWords.length + gradientWords.findIndex(gw => gw.text === word.text);
+    } else {
+      animationIndex = whiteWords.findIndex(ww => ww.text === word.text && titleWords.findIndex(tw => tw.text === ww.text) === index);
+    }
+    return `${animationIndex * 0.1}s`;
+  });
+
   return (
     <section id="home" className="relative pt-80 pb-24 sm:pt-80 sm:pb-32 lg:pt-96 lg:pb-40">
       <div className="absolute top-0 left-0 w-full h-full aurora-background -z-10"></div>
@@ -28,7 +42,7 @@ const HeroSection = () => {
             <span
               key={index}
               className="inline-block animate-fade-in-down"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: animationDelays[index] }}
             >
               <span className={word.isGradient ? "text-wavy-gradient" : ""}>
                 {word.text}
