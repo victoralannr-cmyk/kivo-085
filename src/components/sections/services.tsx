@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DollarSign } from "lucide-react";
+import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
 import AnimatedCodeBlock from "../ui/animated-code-block";
 
