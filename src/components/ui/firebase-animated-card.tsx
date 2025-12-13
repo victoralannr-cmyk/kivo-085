@@ -50,7 +50,9 @@ const FirebaseAnimatedCard = () => {
 
       <div className="z-20 flex flex-col justify-center h-full w-full sm:w-auto space-y-4">
         <div className="flex items-center bg-white/10 p-4 rounded-lg text-gray-200 transition-all duration-300 backdrop-blur-sm hover:bg-white/20 hover:translate-x-1">
-          <svg className="w-6 h-6 mr-4 fill-[#FFCA28]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <svg className="w-6 h-6 mr-4" stroke="#FFCA28" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+          </svg>
           <span className="text-sm font-medium">Cliente / Usuário</span>
         </div>
 
