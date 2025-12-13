@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
 import AnimatedCodeEditor from "../ui/animated-code-editor";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -22,7 +23,7 @@ const services = [
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
-    icon: <Video className="h-10 w-10 animate-camera-flash text-primary/80" style={{ animationDelay: '0.6s' }} />,
+    icon: <Video className={cn("h-10 w-10 text-primary/80 btn-shine")} style={{ animationDelay: '0.6s' }} />,
     title: "Criação de conteúdo Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
