@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
-import AnimatedCodeBlock from "../ui/animated-code-block";
+import AnimatedCodeEditor from "../ui/animated-code-editor";
 
 const services = [
   {
@@ -17,7 +17,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <AnimatedCodeBlock />,
+    icon: <AnimatedCodeEditor />,
     title: "Sites Profissional",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
@@ -43,7 +43,7 @@ const ServicesSection = () => {
             <Card key={service.title} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
               <CardHeader className="items-center text-center">
                 {service.icon && (
-                  <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-4 rounded-full h-[72px] w-[72px] flex items-center justify-center">
+                  <div className="flex items-center justify-center h-[88px]">
                     {service.icon}
                   </div>
                 )}
