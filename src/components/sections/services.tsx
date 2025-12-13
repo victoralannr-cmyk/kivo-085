@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DollarSign, Code, Video } from "lucide-react";
+import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
+import AnimatedCodeBlock from "../ui/animated-code-block";
 
 const services = [
   {
@@ -16,16 +17,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: (
-      <div className="relative h-10 w-10">
-        <Code className="h-10 w-10 text-primary/80" />
-        <div className="absolute inset-0 flex flex-col justify-center items-center overflow-hidden">
-          <span className="code-line line-1 h-1 w-4 bg-accent/70 rounded-full"></span>
-          <span className="code-line line-2 h-1 w-6 bg-accent/70 rounded-full mt-1"></span>
-          <span className="code-line line-3 h-1 w-3 bg-accent/70 rounded-full mt-1"></span>
-        </div>
-      </div>
-    ),
+    icon: <AnimatedCodeBlock />,
     title: "Criação de Sites",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
@@ -52,7 +44,7 @@ const ServicesSection = () => {
           {services.map((service) => (
             <Card key={service.title} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
               <CardHeader className="items-center text-center">
-                <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-4 rounded-full">
+                <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-4 rounded-full h-[72px] w-[72px] flex items-center justify-center">
                   {service.icon}
                 </div>
                 <CardTitle className="mt-4">{service.title}</CardTitle>

@@ -101,12 +101,9 @@
     animation: aurora-animation 10s ease-in-out infinite;
   }
 
-  .code-line {
-    display: block;
-    animation: code-line-animation 3s infinite;
+  .animate-code-line {
+    animation: code-line-animation 3s ease-in-out forwards;
   }
-  .code-line.line-2 { animation-delay: 0.2s; }
-  .code-line.line-3 { animation-delay: 0.4s; }
 }
 
 @keyframes float {
