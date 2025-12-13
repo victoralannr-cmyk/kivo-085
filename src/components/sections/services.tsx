@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: <AnimatedCodeBlock />,
-    title: "Criação de Sites",
+    title: "Sites Profissional",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
   {
