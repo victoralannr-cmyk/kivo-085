@@ -5,10 +5,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown, Users, Code2, Video } from "lucide-react";
+import { ArrowDown, Code2, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimateOnScroll from "../ui/animate-on-scroll";
+import FirebaseAnimatedCard from "../ui/firebase-animated-card";
 
 const faqItems = [
   {
@@ -49,23 +50,25 @@ const FaqSection = () => {
     <section id="faq" className="overflow-hidden py-24 sm:py-32 bg-background">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <div className="mb-16">
-            <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
-              {stats.map((stat, index) => (
-                <AnimateOnScroll key={stat.label} delay={index * 200}>
-                  <div className="flex flex-col items-center">
-                    <div className="font-headline text-5xl font-bold flex">
-                      <span className="text-wavy-gradient">
-                        {stat.prefix}
-                        <AnimatedCounter to={stat.value} />
-                      </span>
+          <AnimateOnScroll>
+            <div className="mb-16">
+              <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
+                {stats.map((stat, index) => (
+                  <AnimateOnScroll key={stat.label} delay={index * 200}>
+                    <div className="flex flex-col items-center">
+                      <div className="font-headline text-5xl font-bold flex">
+                        <span className="text-wavy-gradient">
+                          {stat.prefix}
+                          <AnimatedCounter to={stat.value} />
+                        </span>
+                      </div>
+                      <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
                     </div>
-                    <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
-                  </div>
-                </AnimateOnScroll>
-              ))}
+                  </AnimateOnScroll>
+                ))}
+              </div>
             </div>
-          </div>
+          </AnimateOnScroll>
 
           <AnimateOnScroll delay={600}>
             <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
@@ -97,11 +100,8 @@ const FaqSection = () => {
           
           <AnimateOnScroll delay={1200}>
             <div className="flex flex-col items-center gap-6 mt-12">
-              <div className="relative flex h-32 w-32 items-center justify-center">
-                <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
-                <Users className="h-16 w-16 animate-orbital-wobble text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
-              </div>
-              <p className="max-w-3xl text-lg text-muted-foreground">
+              <FirebaseAnimatedCard />
+              <p className="max-w-3xl text-lg text-muted-foreground mt-8">
                 Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.
               </p>
             </div>
@@ -126,7 +126,7 @@ const FaqSection = () => {
                 <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
                 <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
               </div>
-              <h3 className="font-headline text-2xl font-bold mt-4">Setor Criativo</h3>
+              <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
               <div className="flex gap-4 text-muted-foreground">
                 <span>Planejamento</span>
                 <span>Roteirização</span>
