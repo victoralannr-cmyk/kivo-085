@@ -39,21 +39,21 @@ const FirebaseAnimatedCard = () => {
       <div className="z-20 flex flex-col justify-center h-full w-full space-y-4">
         
         <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-            <div className="mr-4 p-2 border border-[#2196f3] rounded-md">
+            <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
                 <Users className="w-6 h-6 text-[#2196f3]" />
             </div>
             <span className="text-sm font-medium">Cliente / Usuário</span>
         </div>
 
         <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-            <div className="mr-4 p-2 border border-[#2196f3] rounded-md">
+            <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
                 <Database className="w-6 h-6 text-[#2196f3]" />
             </div>
             <span className="text-sm font-medium">Dados do Produto</span>
         </div>
 
         <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-           <div className="mr-4 p-2 border border-[#2196f3] rounded-md">
+           <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
                 <MessageSquare className="w-6 h-6 text-[#2196f3]" />
            </div>
             <span className="text-sm font-medium">Feedback & Analytics</span>
