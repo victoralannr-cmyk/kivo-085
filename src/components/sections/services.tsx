@@ -23,7 +23,7 @@ const services = [
   },
   {
     icon: null,
-    title: "Setor Criativo",
+    title: "Criação de conteúdo Criativo",
     description: "Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.",
   },
 ];
