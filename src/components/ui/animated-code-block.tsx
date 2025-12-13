@@ -10,7 +10,6 @@ const AnimatedCodeBlock = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Reset animation when it's not intersecting
         setIsIntersecting(entry.isIntersecting);
       },
       { threshold: 0.1 }
@@ -38,21 +37,21 @@ const AnimatedCodeBlock = () => {
       <div className="w-full space-y-1">
         <span
           className={cn(
-            'block h-1 w-8 rounded-full bg-accent/70',
+            'block h-1 w-6 rounded-full bg-accent/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.2s' }}
         ></span>
         <span
           className={cn(
-            'block h-1 w-10 rounded-full bg-accent/70',
+            'block h-1 w-8 rounded-full bg-primary/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.4s' }}
         ></span>
         <span
           className={cn(
-            'block h-1 w-6 rounded-full bg-accent/70',
+            'block h-1 w-5 rounded-full bg-green-500/70',
             isIntersecting ? 'animate-code-line' : 'opacity-0'
           )}
           style={{ animationDelay: '0.6s' }}
