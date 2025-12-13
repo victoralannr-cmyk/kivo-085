@@ -34,14 +34,14 @@ const ServicesSection = () => {
     <section id="servicos" className="py-24 sm:py-32">
       <div className="container">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl">Nossos Serviços</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <h2 className="font-headline text-3xl font-bold sm:text-4xl animate-fade-in-down">Nossos Serviços</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground animate-fade-in-down" style={{ animationDelay: '0.2s' }}>
             Entenda como iremos impulsionar sua empresa através da internet
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <Card key={service.title} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl">
+          {services.map((service, index) => (
+            <Card key={service.title} className="flex flex-col bg-card/20 border-border/10 hover:border-primary/50 hover:bg-card/30 transition-all duration-300 transform hover:-translate-y-1 rounded-2xl animate-fade-in-down" style={{ animationDelay: `${0.4 + index * 0.2}s` }}>
               <CardHeader className="items-center text-center">
                 {service.icon && (
                   <div className="flex items-center justify-center h-[88px]">
