@@ -16,7 +16,6 @@ const FirebaseAnimatedCard = () => {
         viewBox="0 0 350 200"
         preserveAspectRatio="none"
       >
-        {/* Adjusted coordinates to connect to the side of the items */}
         <path
           className="connection-line animate-draw-line line-top"
           d="M 90 100 C 140 100, 150 50, 190 50"
@@ -31,12 +30,8 @@ const FirebaseAnimatedCard = () => {
         />
       </svg>
       
-      {/* 3D Box Icon */}
-      <div className="relative flex h-24 w-24 items-center justify-center z-10">
-        {/* Outer Circle */}
+      <div className="relative flex h-24 w-24 items-center justify-center">
         <div className="absolute h-full w-full rounded-full border-2 border-dashed border-white/50"></div>
-        
-        {/* 3D Box */}
         <div className="relative h-12 w-12" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(0deg)' }}>
           <div className="absolute h-full w-full border border-white/20 bg-white/10 animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-3d' }}>
             <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateY(0deg) translateZ(24px)' }}></div>
@@ -55,21 +50,18 @@ const FirebaseAnimatedCard = () => {
           <div className="mr-3 p-2 border border-primary/50 rounded-full">
             <Users className="w-5 h-5 text-primary" />
           </div>
-          <span className="text-sm font-medium">Cliente / Usuário</span>
         </div>
 
         <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
           <div className="mr-3 p-2 border border-primary/50 rounded-full">
             <Database className="w-5 h-5 text-primary" />
           </div>
-          <span className="text-sm font-medium">Dados do Produto</span>
         </div>
 
         <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
           <div className="mr-3 p-2 border border-primary/50 rounded-full">
             <MessageSquare className="w-5 h-5 text-primary" />
           </div>
-          <span className="text-sm font-medium">Feedback & Analytics</span>
         </div>
       </div>
     </div>
