@@ -18,22 +18,26 @@ const FirebaseAnimatedCard = () => {
       >
         <path
           className="connection-line animate-draw-line line-top"
-          d="M 90 100 C 140 100, 150 50, 190 50"
+          d="M 90 100 C 140 100, 150 50, 220 50"
         />
         <path
           className="connection-line animate-draw-line line-mid"
-          d="M 90 100 C 140 100, 140 100, 190 100"
+          d="M 90 100 C 140 100, 140 100, 220 100"
         />
         <path
           className="connection-line animate-draw-line line-bottom"
-          d="M 90 100 C 140 100, 150 150, 190 150"
+          d="M 90 100 C 140 100, 150 150, 220 150"
         />
       </svg>
       
+      {/* Left side box */}
       <div className="relative flex h-24 w-24 items-center justify-center">
+        {/* Orbiting circle */}
         <div className="absolute h-full w-full rounded-full border-2 border-dashed border-white/50"></div>
-        <div className="relative h-12 w-12" style={{ transformStyle: 'preserve-3d' }}>
-            <div className="absolute h-full w-full animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-3d' }}>
+        
+        {/* 3D Box */}
+        <div className="relative h-12 w-12" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-30deg) rotateX(15deg)' }}>
+            <div className="absolute h-full w-full animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-d' }}>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(0deg) translateZ(24px)' }}></div>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(90deg) translateZ(24px)' }}></div>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(180deg) translateZ(24px)' }}></div>
@@ -47,20 +51,20 @@ const FirebaseAnimatedCard = () => {
       {/* Right side items */}
       <div className="flex flex-col justify-center h-full w-auto space-y-4">
         <div className="flex items-center text-slate-200">
-          <div className="p-2 border border-primary/50 rounded-full">
-            <Users className="w-5 h-5 text-primary" />
+          <div className="p-3 border border-primary/50 rounded-full">
+            <Users className="w-8 h-8 text-primary" />
           </div>
         </div>
 
         <div className="flex items-center text-slate-200">
-          <div className="p-2 border border-primary/50 rounded-full">
-            <Database className="w-5 h-5 text-primary" />
+          <div className="p-3 border border-primary/50 rounded-full">
+            <Database className="w-8 h-8 text-primary" />
           </div>
         </div>
 
         <div className="flex items-center text-slate-200">
-          <div className="p-2 border border-primary/50 rounded-full">
-            <MessageSquare className="w-5 h-5 text-primary" />
+          <div className="p-3 border border-primary/50 rounded-full">
+            <MessageSquare className="w-8 h-8 text-primary" />
           </div>
         </div>
       </div>
