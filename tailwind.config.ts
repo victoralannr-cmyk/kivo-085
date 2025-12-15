@@ -137,6 +137,14 @@ export default {
                 transform: 'translateX(150%) skewX(-30deg)',
             },
         },
+        'code-line-animation': {
+          '0%': {
+            transform: 'translateX(-100%)',
+          },
+          '100%': {
+            transform: 'translateX(150%)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -149,6 +157,7 @@ export default {
         'code-pulse': 'code-pulse 2.5s ease-in-out infinite',
         'camera-flash': 'camera-flash 3s ease-in-out infinite',
         'shine-effect': 'shine-effect 8s ease-in-out infinite',
+        'code-line-animation': 'code-line-animation 3s ease-in-out infinite',
       },
     },
   },

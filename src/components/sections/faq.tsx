@@ -11,6 +11,7 @@ import Link from "next/link";
 import AnimateOnScroll from "../ui/animate-on-scroll";
 import FirebaseAnimatedCard from "../ui/firebase-animated-card";
 import PcMonitorIcon from "../ui/pc-monitor-icon";
+import AnimatedCameraIcon from "../ui/animated-camera-icon";
 
 const faqItems = [
   {
@@ -122,6 +123,7 @@ const FaqSection = () => {
           
           <AnimateOnScroll delay={200}>
             <div className="flex flex-col items-center gap-6 mt-16">
+              <AnimatedCameraIcon />
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
               <p className="max-w-3xl text-lg text-muted-foreground">
               Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
