@@ -111,20 +111,21 @@
 
   .animate-fade-in-down {
     animation: fade-in-down 0.5s ease-out forwards;
-    opacity: 0;
   }
 
   .connection-line {
     fill: none;
     stroke-width: 2px;
     stroke-linecap: round;
-    stroke-dasharray: 600;
-    stroke-dashoffset: 600;
-    opacity: 0.8;
+    opacity: 0;
   }
 
   .animate-draw-line {
     animation: drawLine 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .animate-line-flow {
+    animation: line-flow 2.5s ease-in-out infinite;
   }
 
   .line-top { animation-delay: 0.5s; }
@@ -139,6 +140,18 @@
     to {
         stroke-dashoffset: 0;
     }
+}
+
+@keyframes line-flow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes float {

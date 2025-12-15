@@ -17,15 +17,15 @@ const FirebaseAnimatedCard = () => {
         preserveAspectRatio="none"
       >
         <path
-          className="connection-line animate-draw-line line-top stroke-white"
+          className="connection-line animate-line-flow line-top stroke-white"
           d="M 125 100 C 160 100, 170 50, 220 50"
         />
         <path
-          className="connection-line animate-draw-line line-mid stroke-white"
+          className="connection-line animate-line-flow line-mid stroke-white"
           d="M 125 100 C 170 100, 170 100, 220 100"
         />
         <path
-          className="connection-line animate-draw-line line-bottom stroke-white"
+          className="connection-line animate-line-flow line-bottom stroke-white"
           d="M 125 100 C 160 100, 170 150, 220 150"
         />
       </svg>
