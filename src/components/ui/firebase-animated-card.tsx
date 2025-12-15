@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState } from 'react';
 import { Database, MessageSquare, Users } from 'lucide-react';
-import AnimatedCodeBlock from './animated-code-block';
+import AnimatedCodeEditor from './animated-code-editor';
 
 const FirebaseAnimatedCard = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -69,13 +69,13 @@ const FirebaseAnimatedCard = () => {
       )}
     >
         <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden md:block" viewBox="0 0 600 350" preserveAspectRatio="xMidYMid meet">
-            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 150 175 C 280 175, 330 70, 420 70" />
-            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 150 175 C 300 175, 340 175, 420 175" />
-            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 150 175 C 280 175, 330 280, 420 280" />
+            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 280 175, 330 70, 420 70" />
+            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 300 175, 340 175, 420 175" />
+            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 280 175, 330 280, 420 280" />
         </svg>
 
-        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[88px] bg-primary/5 rounded-lg border border-primary/10">
-            <Database className="w-10 h-10 text-accent" />
+        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[200px]">
+            <AnimatedCodeEditor />
         </div>
 
       <div className="z-20 flex flex-col justify-center h-full w-full md:w-auto space-y-4">
