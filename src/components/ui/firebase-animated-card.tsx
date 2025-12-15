@@ -17,13 +17,13 @@ const FirebaseAnimatedCard = () => {
         <div className="absolute h-full w-full rounded-full border-2 border-dashed border-white/50"></div>
         
         {/* 3D Box */}
-        <div className="relative h-12 w-12" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-35deg) rotateX(15deg)' }}>
-          {/* Front Face */}
-          <div className="absolute h-full w-full rounded-lg bg-white" style={{ transform: 'translateZ(0.75rem)' }}></div>
-          {/* Top Face */}
-          <div className="absolute h-6 w-full rounded-t-lg bg-gray-300" style={{ transform: 'rotateX(90deg) translateZ(0.75rem)' }}></div>
-          {/* Side Face */}
-          <div className="absolute h-full w-6 rounded-l-lg bg-gray-400" style={{ transform: 'rotateY(-90deg) translateZ(0.75rem)' }}></div>
+        <div className="relative h-12 w-12 animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-3d' }}>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateY(0deg) translateZ(24px)' }}></div>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateY(90deg) translateZ(24px)' }}></div>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateY(180deg) translateZ(24px)' }}></div>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateY(-90deg) translateZ(24px)' }}></div>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateX(90deg) translateZ(24px)' }}></div>
+          <div className="absolute h-full w-full border border-white/20 bg-white/10" style={{ transform: 'rotateX(-90deg) translateZ(24px)' }}></div>
         </div>
       </div>
 
