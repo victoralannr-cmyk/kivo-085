@@ -74,8 +74,8 @@ const FirebaseAnimatedCard = () => {
             <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 150 175 C 280 175, 330 280, 420 280" />
         </svg>
 
-        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[88px]">
-            <AnimatedCodeBlock />
+        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[88px] bg-primary/5 rounded-lg border border-primary/10">
+            <Database className="w-10 h-10 text-accent" />
         </div>
 
       <div className="z-20 flex flex-col justify-center h-full w-full md:w-auto space-y-4">
