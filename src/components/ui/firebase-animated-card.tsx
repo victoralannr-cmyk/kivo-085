@@ -18,26 +18,26 @@ const FirebaseAnimatedCard = () => {
       >
         <path
           className="connection-line animate-draw-line line-top"
-          d="M 90 100 C 140 100, 150 50, 220 50"
+          d="M 125 100 C 160 100, 170 50, 220 50"
         />
         <path
           className="connection-line animate-draw-line line-mid"
-          d="M 90 100 C 140 100, 140 100, 220 100"
+          d="M 125 100 C 170 100, 170 100, 220 100"
         />
         <path
           className="connection-line animate-draw-line line-bottom"
-          d="M 90 100 C 140 100, 150 150, 220 150"
+          d="M 125 100 C 160 100, 170 150, 220 150"
         />
       </svg>
       
       {/* Left side box */}
       <div className="relative flex h-24 w-24 items-center justify-center">
         {/* Orbiting circle */}
-        <div className="absolute h-full w-full rounded-full border-2 border-dashed border-white/50"></div>
+        <div className="absolute h-full w-full rounded-full border border-dashed border-white/50"></div>
         
         {/* 3D Box */}
         <div className="relative h-12 w-12" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-30deg) rotateX(15deg)' }}>
-            <div className="absolute h-full w-full animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-d' }}>
+            <div className="absolute h-full w-full animate-spin-3d" style={{ animationDuration: '15s', transformStyle: 'preserve-3d' }}>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(0deg) translateZ(24px)' }}></div>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(90deg) translateZ(24px)' }}></div>
                 <div className="absolute flex h-full w-full items-center justify-center border border-white/20 bg-white/10" style={{ transform: 'rotateY(180deg) translateZ(24px)' }}></div>
