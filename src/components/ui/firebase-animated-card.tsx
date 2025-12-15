@@ -14,11 +14,7 @@ const FirebaseAnimatedCard = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         isInViewport.current = entry.isIntersecting;
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.5 }
     );
@@ -37,14 +33,10 @@ const FirebaseAnimatedCard = () => {
 
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Tab is hidden, reset animation if needed when it comes back
-        if(isInViewport.current) {
+      if (isInViewport.current) {
+        if (document.hidden) {
           setIsVisible(false);
-        }
-      } else {
-        // Tab is visible, re-trigger animation if in viewport
-        if (isInViewport.current) {
+        } else {
           // A quick toggle to restart the CSS animation
           setIsVisible(false);
           setTimeout(() => {
@@ -68,10 +60,10 @@ const FirebaseAnimatedCard = () => {
         'relative w-full max-w-xl lg:max-w-2xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col sm:flex-row justify-between items-center gap-8 overflow-hidden border border-slate-700/50',
       )}
     >
-        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden sm:block" viewBox="0 0 500 250" preserveAspectRatio="none">
-            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 60, 340 60" />
-            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 125, 340 125" />
-            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 190, 340 190" />
+        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden sm:block" viewBox="0 0 450 250" preserveAspectRatio="none">
+            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 260 125, 260 60, 310 60" />
+            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 260 125, 260 125, 310 125" />
+            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 260 125, 260 190, 310 190" />
         </svg>
 
         <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[200px]">
