@@ -51,7 +51,7 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
         <div className="absolute w-[8px] h-full top-0 left-0 bg-[#111] rounded-l-lg" style={{ transform: 'rotateY(-90deg) translateZ(4px)' }}></div>
         
         {/* Monitor base */}
-        <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-1/3 h-2 bg-border/20 rounded-b-sm" style={{transform: 'translateZ(-1px)'}}></div>
+        <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-1/2 h-3 bg-border/20 rounded-b-sm" style={{transform: 'translateZ(-1px)'}}></div>
       </div>
     </div>
   );
