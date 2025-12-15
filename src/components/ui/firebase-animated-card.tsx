@@ -65,13 +65,13 @@ const FirebaseAnimatedCard = () => {
     <div
       ref={ref}
       className={cn(
-        'relative w-full max-w-xl lg:max-w-3xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 sm:p-10 flex flex-col md:flex-row justify-between items-center gap-8 overflow-hidden border border-slate-700/50',
+        'relative w-full max-w-xl lg:max-w-2xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center gap-4 overflow-hidden border border-slate-700/50',
       )}
     >
-        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden md:block" viewBox="0 0 600 350" preserveAspectRatio="xMidYMid meet">
-            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 280 175, 330 70, 420 70" />
-            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 300 175, 340 175, 420 175" />
-            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 175 C 280 175, 330 280, 420 280" />
+        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden md:block" viewBox="0 0 550 300" preserveAspectRatio="xMidYMid meet">
+            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 70, 370 70" />
+            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 150, 370 150" />
+            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 230, 370 230" />
         </svg>
 
         <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[200px]">
@@ -80,23 +80,23 @@ const FirebaseAnimatedCard = () => {
 
       <div className="z-20 flex flex-col justify-center h-full w-full md:w-auto space-y-4">
         
-        <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-            <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
-                <Users className="w-6 h-6 text-[#2196f3]" />
+        <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
+            <div className="mr-3 p-2 border border-[#2196f3] rounded-full">
+                <Users className="w-5 h-5 text-[#2196f3]" />
             </div>
             <span className="text-sm font-medium">Cliente / Usuário</span>
         </div>
 
-        <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-            <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
-                <Database className="w-6 h-6 text-[#2196f3]" />
+        <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
+            <div className="mr-3 p-2 border border-[#2196f3] rounded-full">
+                <Database className="w-5 h-5 text-[#2196f3]" />
             </div>
             <span className="text-sm font-medium">Dados do Produto</span>
         </div>
 
-        <div className="flex items-center bg-slate-800/50 p-4 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
-           <div className="mr-4 p-2 border border-[#2196f3] rounded-full">
-                <MessageSquare className="w-6 h-6 text-[#2196f3]" />
+        <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
+           <div className="mr-3 p-2 border border-[#2196f3] rounded-full">
+                <MessageSquare className="w-5 h-5 text-[#2196f3]" />
            </div>
             <span className="text-sm font-medium">Feedback & Analytics</span>
         </div>
