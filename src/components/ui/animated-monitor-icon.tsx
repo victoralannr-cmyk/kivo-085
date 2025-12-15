@@ -28,26 +28,31 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={cn(
-        'relative h-[88px] w-[100px] bg-[#1e1e1e] rounded-lg border border-border/20 shadow-lg flex flex-col items-center justify-center p-2 overflow-hidden',
-        className
-      )}
-    >
-      {/* Screen content */}
-      <div className="w-full h-full relative">
-        <span
+    <div ref={ref} className={cn("relative h-[88px] w-[100px] group", className)} style={{ perspective: '800px' }}>
+      <div className="relative w-full h-full transition-transform duration-500 group-hover:rotate-y-0" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-25deg) rotateX(10deg)' }}>
+        {/* Monitor Face */}
+        <div
           className={cn(
-            'absolute top-1/2 -translate-y-1/2 block h-1.5 w-10 rounded-full bg-primary/70',
-            isIntersecting ? 'animate-code-line' : 'opacity-0'
+            'absolute w-full h-full bg-[#1e1e1e] rounded-lg border border-border/20 shadow-lg flex flex-col items-center justify-center p-2 overflow-hidden'
           )}
-        ></span>
-        <span className="absolute top-1/2 right-4 -translate-y-1/2 h-4 w-1 bg-primary/70 animate-blink"></span>
+        >
+          {/* Screen content */}
+          <div className="w-full h-full relative">
+            <span
+              className={cn(
+                'absolute top-1/2 -translate-y-1/2 block h-1.5 w-10 rounded-full bg-primary/70',
+                isIntersecting ? 'animate-code-line' : 'opacity-0'
+              )}
+            ></span>
+            <span className="absolute top-1/2 right-4 -translate-y-1/2 h-4 w-1 bg-primary/70 animate-blink"></span>
+          </div>
+        </div>
+        {/* Monitor Side */}
+        <div className="absolute w-[8px] h-full top-0 left-0 bg-[#111] rounded-l-lg" style={{ transform: 'rotateY(-90deg) translateZ(4px)' }}></div>
+        
+        {/* Monitor base */}
+        <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-1/3 h-2 bg-border/20 rounded-b-sm" style={{transform: 'translateZ(-1px)'}}></div>
       </div>
-
-      {/* Monitor base */}
-      <div className="w-1/3 h-2 bg-border/20 rounded-b-sm"></div>
     </div>
   );
 };
