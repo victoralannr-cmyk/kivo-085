@@ -127,11 +127,6 @@ const FaqSection = () => {
                 <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
               </div>
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
-              <div className="flex gap-4 text-muted-foreground">
-                <span>Planejamento</span>
-                <span>Roteirização</span>
-                <span>Produção</span>
-              </div>
               <p className="max-w-3xl text-lg text-muted-foreground">
               Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
               </p>
