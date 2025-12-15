@@ -65,20 +65,20 @@ const FirebaseAnimatedCard = () => {
     <div
       ref={ref}
       className={cn(
-        'relative w-full max-w-xl lg:max-w-2xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center gap-4 overflow-hidden border border-slate-700/50',
+        'relative w-full max-w-xl lg:max-w-2xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col sm:flex-row justify-between items-center gap-8 overflow-hidden border border-slate-700/50',
       )}
     >
-        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden md:block" viewBox="0 0 550 300" preserveAspectRatio="xMidYMid meet">
-            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 70, 370 70" />
-            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 150, 370 150" />
-            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 150 C 280 150, 300 230, 370 230" />
+        <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden sm:block" viewBox="0 0 500 250" preserveAspectRatio="none">
+            <path className={cn('connection-line line-top', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 60, 340 60" />
+            <path className={cn('connection-line line-mid', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 125, 340 125" />
+            <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 280 125, 280 190, 340 190" />
         </svg>
 
         <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[200px]">
             <AnimatedCodeEditor />
         </div>
 
-      <div className="z-20 flex flex-col justify-center h-full w-full md:w-auto space-y-4">
+      <div className="z-20 flex flex-col justify-center h-full w-full sm:w-auto space-y-4">
         
         <div className="flex items-center bg-slate-800/50 p-3 rounded-lg text-slate-200 transition-all duration-300 hover:bg-slate-800/80 hover:translate-x-1">
             <div className="mr-3 p-2 border border-[#2196f3] rounded-full">
