@@ -31,11 +31,11 @@ const HeroSection = () => {
             <AnimateOnScroll
               key={index}
               delay={animationDelays[index]}
-              className="inline-block"
+              className="inline-block mr-2"
             >
               <span className={word.isGradient ? "text-wavy-gradient" : ""}>
                 {word.text}
-              </span>{' '}
+              </span>
             </AnimateOnScroll>
           ))}
         </h1>
