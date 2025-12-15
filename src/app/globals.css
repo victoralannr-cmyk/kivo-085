@@ -121,8 +121,11 @@
     stroke-linecap: round;
     stroke-dasharray: 600;
     stroke-dashoffset: 600;
-    animation: drawLine 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0.8;
+  }
+
+  .animate-draw-line {
+    animation: drawLine 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
   .line-top { animation-delay: 0.5s; }
