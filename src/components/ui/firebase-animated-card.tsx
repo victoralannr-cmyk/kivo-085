@@ -7,7 +7,7 @@ const FirebaseAnimatedCard = () => {
   return (
     <div
       className={cn(
-        'relative w-full max-w-sm bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex items-center justify-around gap-4 overflow-hidden border border-slate-700/50',
+        'relative w-full max-w-sm bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex items-center justify-center gap-8 overflow-hidden border border-slate-700/50',
       )}
     >
       <svg
@@ -18,15 +18,15 @@ const FirebaseAnimatedCard = () => {
       >
         <path
           className="connection-line animate-draw-line line-top"
-          d="M 90 100 C 120 100, 150 45, 180 45"
+          d="M 70 100 C 120 100, 150 45, 200 45"
         />
         <path
           className="connection-line animate-draw-line line-mid"
-          d="M 90 100 C 140 100, 140 100, 180 100"
+          d="M 70 100 C 140 100, 140 100, 200 100"
         />
         <path
           className="connection-line animate-draw-line line-bottom"
-          d="M 90 100 C 120 100, 150 155, 180 155"
+          d="M 70 100 C 120 100, 150 155, 200 155"
         />
       </svg>
       {/* 3D Box Icon */}
