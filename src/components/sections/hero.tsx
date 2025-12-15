@@ -17,22 +17,7 @@ const HeroSection = () => {
     { text: "conversão", isGradient: true },
   ];
 
-  const whiteWords = titleWords.filter(w => !w.isGradient);
-  const gradientWords = titleWords.filter(w => w.isGradient);
-
-  const animationDelays = titleWords.map((word, index) => {
-    let animationIndex;
-    if (word.isGradient) {
-      animationIndex = whiteWords.length + gradientWords.findIndex(gw => gw.text === word.text);
-    } else {
-      // Handle potential duplicate white words
-      const occurrences = whiteWords.map((w, i) => w.text === word.text ? i : -1).filter(i => i !== -1);
-      const titleOccurrences = titleWords.map((w, i) => w.text === word.text && !w.isGradient ? i : -1).filter(i => i !== -1);
-      const occurrenceIndex = titleOccurrences.indexOf(index);
-      animationIndex = occurrences[occurrenceIndex];
-    }
-    return animationIndex * 100;
-  });
+  const animationDelays = titleWords.map((_, index) => index * 100);
 
   return (
     <section id="home" className="relative pt-80 pb-24 sm:pt-80 sm:pb-32 lg:pt-96 lg:pb-40">
@@ -50,8 +35,7 @@ const HeroSection = () => {
             >
               <span className={word.isGradient ? "text-wavy-gradient" : ""}>
                 {word.text}
-              </span>
-              {' '}
+              </span>{' '}
             </AnimateOnScroll>
           ))}
         </h1>
