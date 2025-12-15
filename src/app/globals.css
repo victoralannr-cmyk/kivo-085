@@ -116,7 +116,6 @@
 
   .connection-line {
     fill: none;
-    stroke: #2196f3;
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-dasharray: 600;
