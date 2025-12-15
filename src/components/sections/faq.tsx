@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AnimatedCounter from "@/components/ui/animated-counter";
-import { ArrowDown, Video } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimateOnScroll from "../ui/animate-on-scroll";
@@ -122,10 +122,6 @@ const FaqSection = () => {
           
           <AnimateOnScroll delay={200}>
             <div className="flex flex-col items-center gap-6 mt-16">
-              <div className="relative flex h-32 w-32 items-center justify-center">
-                <div className="absolute h-full w-full rounded-full bg-primary/10 animate-pulse"></div>
-                <Video className="h-16 w-16 animate-camera-flash text-primary/80 drop-shadow-[0_0_10px_hsl(var(--primary)_/_0.5)]" />
-              </div>
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
               <p className="max-w-3xl text-lg text-muted-foreground">
               Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.
