@@ -33,18 +33,32 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
         {/* Monitor Face */}
         <div
           className={cn(
-            'absolute w-full h-full bg-[#1e1e1e] rounded-lg border border-border/20 shadow-lg flex flex-col items-center justify-center p-2 overflow-hidden'
+            'absolute w-full h-full bg-[#1e1e1e] rounded-lg border border-border/20 shadow-lg flex flex-col items-start justify-center p-3 overflow-hidden'
           )}
         >
           {/* Screen content */}
-          <div className="w-full h-full relative">
+          <div className="w-full space-y-2">
             <span
               className={cn(
-                'absolute top-1/2 -translate-y-1/2 block h-1.5 w-10 rounded-full bg-primary/70',
+                'block h-1.5 w-10 rounded-full bg-accent/70',
                 isIntersecting ? 'animate-code-line' : 'opacity-0'
               )}
+              style={{ animationDelay: '0.2s' }}
             ></span>
-            <span className="absolute top-1/2 right-4 -translate-y-1/2 h-4 w-1 bg-primary/70 animate-blink"></span>
+            <span
+              className={cn(
+                'block h-1.5 w-14 rounded-full bg-primary/70',
+                isIntersecting ? 'animate-code-line' : 'opacity-0'
+              )}
+              style={{ animationDelay: '0.4s' }}
+            ></span>
+            <span
+              className={cn(
+                'block h-1.5 w-8 rounded-full bg-green-500/70',
+                isIntersecting ? 'animate-code-line' : 'opacity-0'
+              )}
+              style={{ animationDelay: '0.6s' }}
+            ></span>
           </div>
         </div>
         {/* Monitor Side */}
