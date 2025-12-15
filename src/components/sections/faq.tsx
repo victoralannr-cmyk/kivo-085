@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AnimateOnScroll from "../ui/animate-on-scroll";
 import FirebaseAnimatedCard from "../ui/firebase-animated-card";
-import AnimatedCodeBlock from "../ui/animated-code-block";
+import PcMonitorIcon from "../ui/pc-monitor-icon";
 
 const faqItems = [
   {
@@ -111,7 +111,7 @@ const FaqSection = () => {
           <AnimateOnScroll delay={200}>
             <div className="flex flex-col items-center gap-6 mt-16">
               <div className="relative flex h-32 w-full items-center justify-center">
-                <AnimatedCodeBlock />
+                <PcMonitorIcon />
               </div>
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de Sites</h3>
               <p className="max-w-3xl text-lg text-muted-foreground">
