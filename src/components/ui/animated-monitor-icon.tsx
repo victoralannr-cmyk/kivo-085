@@ -43,13 +43,13 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
   }, [isIntersecting]);
 
   return (
-    <div ref={ref} className={cn("relative h-[88px] w-[88px] group rounded-full", className)} style={{ perspective: '800px' }}>
+    <div ref={ref} className={cn("relative h-[88px] w-full group", className)} style={{ perspective: '800px' }}>
       <div className="relative w-full h-full transition-transform duration-500 group-hover:rotate-y-0" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-25deg) rotateX(10deg)' }}>
         {/* Monitor Face */}
         <div
           key={key}
           className={cn(
-            'absolute w-full h-full bg-[#111] rounded-full border border-border/20 shadow-lg flex flex-col items-start justify-center p-3 overflow-hidden'
+            'absolute w-full h-full bg-[#111] rounded-lg border border-border/20 shadow-lg flex flex-col items-start justify-center p-3 overflow-hidden'
           )}
         >
           {/* Screen content */}
