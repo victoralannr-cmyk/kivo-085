@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
-import AnimatedCodeEditor from "../ui/animated-code-editor";
 import { cn } from "@/lib/utils";
 import AnimateOnScroll from "../ui/animate-on-scroll";
+import AnimatedMonitorIcon from "../ui/animated-monitor-icon";
 
 const services = [
   {
@@ -19,7 +19,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <AnimatedCodeEditor />,
+    icon: <AnimatedMonitorIcon />,
     title: "Sites Profissional",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
