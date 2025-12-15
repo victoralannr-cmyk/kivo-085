@@ -13,8 +13,17 @@ const FirebaseAnimatedCard = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        isInViewport.current = entry.isIntersecting;
-        setIsVisible(entry.isIntersecting);
+        const isCurrentlyInViewport = entry.isIntersecting;
+        if (isCurrentlyInViewport !== isInViewport.current) {
+          isInViewport.current = isCurrentlyInViewport;
+          // A quick toggle to restart the CSS animation
+          setIsVisible(false);
+          if (isCurrentlyInViewport) {
+            setTimeout(() => {
+              setIsVisible(true);
+            }, 50);
+          }
+        }
       },
       { threshold: 0.5 }
     );
@@ -57,7 +66,7 @@ const FirebaseAnimatedCard = () => {
     <div
       ref={ref}
       className={cn(
-        'relative w-full max-w-xl lg:max-w-2xl h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col sm:flex-row justify-between items-center gap-8 overflow-hidden border border-slate-700/50',
+        'relative w-full max-w-lg h-auto bg-[#0f172a]/50 backdrop-blur-sm rounded-2xl shadow-lg p-6 flex flex-col sm:flex-row justify-between items-center gap-8 overflow-hidden border border-slate-700/50',
       )}
     >
         <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-10 hidden sm:block" viewBox="0 0 450 250" preserveAspectRatio="none">
@@ -66,7 +75,7 @@ const FirebaseAnimatedCard = () => {
             <path className={cn('connection-line line-bottom', isVisible ? 'animate-draw-line' : '')} d="M 210 125 C 260 125, 260 190, 310 190" />
         </svg>
 
-        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-[200px]">
+        <div className="z-20 flex-shrink-0 flex justify-center items-center h-[88px] w-full max-w-[200px]">
             <AnimatedCodeEditor />
         </div>
 
