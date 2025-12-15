@@ -3,7 +3,7 @@ import { DollarSign, Video } from "lucide-react";
 import AnimatedUsersIcon from "../ui/animated-users-icon";
 import { cn } from "@/lib/utils";
 import AnimateOnScroll from "../ui/animate-on-scroll";
-import AnimatedMonitorIcon from "../ui/animated-monitor-icon";
+import AnimatedCodeBlock from "../ui/animated-code-block";
 
 const services = [
   {
@@ -19,7 +19,7 @@ const services = [
     description: "Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.",
   },
   {
-    icon: <AnimatedMonitorIcon />,
+    icon: <AnimatedCodeBlock />,
     title: "Sites Profissional",
     description: "Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.",
   },
