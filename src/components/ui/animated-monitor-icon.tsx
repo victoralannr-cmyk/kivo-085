@@ -5,12 +5,18 @@ import { useEffect, useRef, useState } from 'react';
 
 const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [key, setKey] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          setKey((prev) => prev + 1);
+        } else {
+          setIsIntersecting(false);
+        }
       },
       { threshold: 0.1 }
     );
@@ -20,20 +26,31 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
       observer.observe(currentRef);
     }
 
+    const handleVisibilityChange = () => {
+      if (!document.hidden && isIntersecting) {
+        // Re-trigger animation by updating key
+        setKey((prev) => prev + 1);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     return () => {
       if (currentRef) {
         observer.unobserve(currentRef);
       }
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []);
+  }, [isIntersecting]);
 
   return (
     <div ref={ref} className={cn("relative h-[88px] w-[100px] group", className)} style={{ perspective: '800px' }}>
       <div className="relative w-full h-full transition-transform duration-500 group-hover:rotate-y-0" style={{ transformStyle: 'preserve-3d', transform: 'rotateY(-25deg) rotateX(10deg)' }}>
         {/* Monitor Face */}
         <div
+          key={key}
           className={cn(
-            'absolute w-full h-full bg-[#1e1e1e] rounded-lg border border-border/20 shadow-lg flex flex-col items-start justify-center p-3 overflow-hidden'
+            'absolute w-full h-full bg-[#111] rounded-lg border border-border/20 shadow-lg flex flex-col items-start justify-center p-3 overflow-hidden'
           )}
         >
           {/* Screen content */}
@@ -62,7 +79,7 @@ const AnimatedMonitorIcon = ({ className }: { className?: string }) => {
           </div>
         </div>
         {/* Monitor Side */}
-        <div className="absolute w-[8px] h-full top-0 left-0 bg-[#111] rounded-l-lg" style={{ transform: 'rotateY(-90deg) translateZ(4px)' }}></div>
+        <div className="absolute w-[8px] h-full top-0 left-0 bg-[#0a0a0a] rounded-l-lg" style={{ transform: 'rotateY(-90deg) translateZ(4px)' }}></div>
         
         {/* Monitor base */}
         <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-1/2 h-3 bg-border/20 rounded-b-sm" style={{transform: 'translateZ(-1px)'}}></div>
