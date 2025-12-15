@@ -12,8 +12,8 @@ const FirebaseAnimatedCard = () => {
     >
       {/* New Icon: Square inside a Circle */}
       <div className="relative flex h-24 w-24 items-center justify-center">
-        <div className="absolute h-full w-full animate-orbital-wobble rounded-full border-2 border-dashed border-primary/50"></div>
-        <div className="h-12 w-12 animate-pulse-light rounded-lg bg-primary/20"></div>
+        <div className="absolute h-full w-full rounded-full border-2 border-dashed border-primary/50"></div>
+        <div className="h-12 w-12 rounded-lg bg-white"></div>
       </div>
 
       {/* Right side items */}
