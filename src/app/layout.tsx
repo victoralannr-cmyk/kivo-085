@@ -16,9 +16,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Kivo Digital Surge',
   description: 'Impulsionamos sua empresa para o topo com modelos preditivos de conversão.',
-  icons: {
-    icon: 'https://i.postimg.cc/K8MgDrs5/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
-  },
 };
 
 export default function RootLayout({
@@ -29,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark scroll-smooth">
       <head>
+        <link rel="icon" type="image/png" href="/favicon.png?v=1" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
