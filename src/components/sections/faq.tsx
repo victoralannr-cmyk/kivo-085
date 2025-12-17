@@ -56,7 +56,7 @@ const FaqSection = () => {
             <div className="mb-16">
               <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
                 {stats.map((stat, index) => (
-                  <AnimateOnScroll key={stat.label} delay={index * 200}>
+                  <div key={stat.label}>
                     <div className="flex flex-col items-center">
                       <div className="font-headline text-5xl font-bold flex">
                         <span className="text-wavy-gradient">
@@ -66,13 +66,13 @@ const FaqSection = () => {
                       </div>
                       <p className="mt-2 text-lg text-muted-foreground">{stat.label}</p>
                     </div>
-                  </AnimateOnScroll>
+                  </div>
                 ))}
               </div>
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll delay={600}>
+          <AnimateOnScroll delay={100}>
             <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
               Tráfego{' '}
               <span className="text-wavy-gradient">
@@ -86,13 +86,13 @@ const FaqSection = () => {
             </p>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={800}>
+          <AnimateOnScroll delay={200}>
             <div className="flex justify-center my-8">
-              <ArrowDown className="h-16 w-16 text-white animate-bounce" />
+              <ArrowDown className="h-16 w-16 text-white" />
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={1000}>
+          <AnimateOnScroll delay={300}>
             <div className="flex flex-col items-center gap-4 my-8">
               <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
                 <p className="font-semibold text-foreground">Estratégias de Vendas</p>
@@ -100,7 +100,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={1200}>
+          <AnimateOnScroll delay={400}>
             <div className="flex flex-col items-center gap-6 mt-12">
               <FirebaseAnimatedCard />
               <p className="max-w-3xl text-lg text-muted-foreground mt-8">
@@ -109,7 +109,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll delay={200}>
+          <AnimateOnScroll delay={100}>
             <div className="flex flex-col items-center gap-6 mt-16">
               <div className="relative flex h-32 w-full items-center justify-center">
                 <PcMonitorIcon />
@@ -121,7 +121,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={200}>
+          <AnimateOnScroll delay={100}>
             <div className="flex flex-col items-center gap-6 mt-16">
               <AnimatedCameraIcon />
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
@@ -143,7 +143,7 @@ const FaqSection = () => {
 
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
-            <AnimateOnScroll key={index} delay={index * 200}>
+            <AnimateOnScroll key={index} delay={index * 100}>
                 <AccordionItem value={`item-${index + 1}`} >
                 <AccordionTrigger className="text-left text-lg hover:no-underline">
                     {item.question}
