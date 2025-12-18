@@ -26,8 +26,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark scroll-smooth">
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png?v=1" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="https://i.postimg.cc/9Mx4GF0p/favicon-kivo-(1)-(2).png" />
+        <link rel="apple-touch-icon" href="https://i.postimg.cc/9Mx4GF0p/favicon-kivo-(1)-(2).png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
