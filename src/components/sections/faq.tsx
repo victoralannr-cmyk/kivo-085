@@ -52,7 +52,7 @@ const FaqSection = () => {
     <section id="faq" className="overflow-hidden py-24 sm:py-32 bg-background">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <AnimateOnScroll>
+          <AnimateOnScroll animationClassName="animate-fade-in-down">
             <div className="mb-16">
               <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-4">
                 {stats.map((stat, index) => (
@@ -72,7 +72,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll delay={100}>
+          <AnimateOnScroll delay={100} animationClassName="animate-fade-in-down">
             <p className="mx-auto max-w-3xl font-headline text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-4">
               Tráfego{' '}
               <span className="text-wavy-gradient">
@@ -86,7 +86,7 @@ const FaqSection = () => {
             </p>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={200}>
+          <AnimateOnScroll delay={200} animationClassName="animate-fade-in-down">
             <div className="flex justify-center my-8">
               <ArrowDown className="h-16 w-16 text-white" />
             </div>
