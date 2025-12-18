@@ -8,7 +8,7 @@ const KivoLogo = ({ className }: { className?: string }) => {
       alt="Kivo Logo"
       width={168}
       height={48}
-      className={cn('h-12 w-auto', className)}
+      className={cn('w-auto', className)}
       priority
     />
   );
