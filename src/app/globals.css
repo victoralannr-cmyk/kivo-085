@@ -113,6 +113,10 @@
     animation: fade-in-down 0.5s ease-out forwards;
   }
 
+  .animate-fade-in-left {
+    animation: fade-in-left 0.5s ease-out forwards;
+  }
+
   .connection-line {
     fill: none;
     stroke-width: 2px;
@@ -255,5 +259,16 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

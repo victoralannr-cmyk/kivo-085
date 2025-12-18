@@ -15,7 +15,7 @@ interface AnimateOnScrollProps extends HTMLAttributes<HTMLDivElement> {
 const AnimateOnScroll = ({
   children,
   className,
-  animationClassName = 'animate-fade-in-down',
+  animationClassName = 'animate-fade-in-left',
   delay = 0,
   threshold = 0.1,
   triggerOnce = false,
