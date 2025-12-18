@@ -56,6 +56,7 @@ const FloatingLogos = ({ count = 15 }: FloatingLogosProps) => {
             animationDelay: logo.animationDelay,
             transform: 'translate(-50%, -50%)',
           }}
+          priority
         />
       ))}
     </div>
