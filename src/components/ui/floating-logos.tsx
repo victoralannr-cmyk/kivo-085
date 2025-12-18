@@ -1,27 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 
 type FloatingLogosProps = {
   count?: number;
+};
+
+interface Logo {
+  id: number;
+  src: string;
+  top: string;
+  left: string;
+  animationDuration: string;
+  animationDelay: string;
+  size: number;
 }
 
 const FloatingLogos = ({ count = 15 }: FloatingLogosProps) => {
-  const logos = useMemo(() => {
-    return Array.from({ length: count }).map((_, i) => {
-      const size = Math.random() * 40 + 20; // 20px to 60px
-      const side = Math.random() < 0.5 ? 'left' : 'right';
-      return {
-        id: i,
-        src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
-        top: `${Math.random() * 100}%`,
-        left: side === 'left' ? `${Math.random() * 30}%` : `${70 + Math.random() * 30}%`,
-        animationDuration: `${Math.random() * 10 + 10}s`,
-        animationDelay: `${Math.random() * 10}s`,
-        size: size,
-      };
-    });
+  const [logos, setLogos] = useState<Logo[]>([]);
+
+  useEffect(() => {
+    const generateLogos = () => {
+      return Array.from({ length: count }).map((_, i) => {
+        const size = Math.random() * 40 + 20; // 20px to 60px
+        const side = Math.random() < 0.5 ? 'left' : 'right';
+        return {
+          id: i,
+          src: 'https://i.postimg.cc/T1HKtvtD/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
+          top: `${Math.random() * 100}%`,
+          left: side === 'left' ? `${Math.random() * 30}%` : `${70 + Math.random() * 30}%`,
+          animationDuration: `${Math.random() * 10 + 10}s`,
+          animationDelay: `${Math.random() * 10}s`,
+          size: size,
+        };
+      });
+    };
+    setLogos(generateLogos());
   }, [count]);
 
   return (
