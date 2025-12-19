@@ -117,6 +117,10 @@
     animation: fade-in-left 0.5s ease-out forwards;
   }
 
+  .animate-fade-in-right {
+    animation: fade-in-right 0.5s ease-out forwards;
+  }
+
   .connection-line {
     fill: none;
     stroke-width: 2px;
@@ -266,6 +270,17 @@
   from {
     opacity: 0;
     transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
