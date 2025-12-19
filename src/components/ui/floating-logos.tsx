@@ -17,7 +17,7 @@ interface Logo {
   size: number;
 }
 
-const FloatingLogos = ({ count = 15 }: FloatingLogosProps) => {
+const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
   const [logos, setLogos] = useState<Logo[]>([]);
 
   useEffect(() => {
