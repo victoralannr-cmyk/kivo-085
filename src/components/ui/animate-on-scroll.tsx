@@ -60,7 +60,7 @@ const AnimateOnScroll = ({
   return (
     <div
       ref={ref}
-      className={cn(className, 'transition-opacity duration-1000', isVisible ? `${animationClassName} opacity-100` : 'opacity-0')}
+      className={cn(className, 'opacity-0 transition-opacity duration-1000', isVisible && `${animationClassName} opacity-100`)}
       style={{ ...animationStyle, ...props.style }}
       {...props}
     >
