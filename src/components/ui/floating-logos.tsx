@@ -27,7 +27,7 @@ const FloatingLogos = ({ count = 30 }: FloatingLogosProps) => {
         const side = Math.random() < 0.5 ? 'left' : 'right';
         return {
           id: i,
-          src: 'https://i.imgur.com/NWwb87f.png',
+          src: 'https://i.postimg.cc/K8MgDrs5/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
           top: `${Math.random() * 100}%`,
           left: side === 'left' ? `${Math.random() * 30}%` : `${70 + Math.random() * 30}%`,
           animationDuration: `${Math.random() * 10 + 10}s`,

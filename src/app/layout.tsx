@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: 'Kivo Digital Surge',
   description: 'Impulsionamos sua empresa para o topo com modelos preditivos de conversão.',
   icons: {
-    icon: 'https://i.imgur.com/NWwb87f.png',
-    apple: 'https://i.imgur.com/NWwb87f.png',
+    icon: 'https://i.postimg.cc/K8MgDrs5/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
+    apple: 'https://i.postimg.cc/K8MgDrs5/Captura-de-tela-2025-11-27-221300-removebg-preview.png',
   },
 };
 
