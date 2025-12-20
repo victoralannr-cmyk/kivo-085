@@ -42,7 +42,7 @@ const Header = () => {
           : 'bg-transparent backdrop-blur-lg border-white/5'
       )}>
         <Link href="#home" className="flex items-center">
-          <KivoLogo className="h-8" />
+          <KivoLogo className="h-9" />
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {navLinks.map((link) => (
