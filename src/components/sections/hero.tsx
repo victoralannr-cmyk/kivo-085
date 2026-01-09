@@ -4,17 +4,17 @@ import AnimateOnScroll from "../ui/animate-on-scroll";
 
 const HeroSection = () => {
   const titleWords = [
-    { text: "Impulsionamos", isGradient: true, delay: 100 },
-    { text: "sua", isGradient: false, delay: 300 },
-    { text: "empresa", isGradient: false, delay: 300 },
-    { text: "para", isGradient: true, delay: 400 },
-    { text: "o", isGradient: false, delay: 500 },
-    { text: "topo", isGradient: false, delay: 500 },
-    { text: "com", isGradient: false, delay: 600 },
-    { text: "modelos", isGradient: false, delay: 600 },
-    { text: "preditivos", isGradient: true, delay: 700 },
-    { text: "de", isGradient: true, delay: 800 },
-    { text: "conversão", isGradient: true, delay: 900 },
+    { text: "Impulsionamos", isGradient: true, delay: 100, anim: "animate-fade-in-left" },
+    { text: "sua", isGradient: false, delay: 300, anim: "animate-fade-in-right" },
+    { text: "empresa", isGradient: false, delay: 300, anim: "animate-fade-in-left" },
+    { text: "para", isGradient: true, delay: 400, anim: "animate-fade-in-right" },
+    { text: "o", isGradient: false, delay: 500, anim: "animate-fade-in-left" },
+    { text: "topo", isGradient: false, delay: 500, anim: "animate-fade-in-right" },
+    { text: "com", isGradient: false, delay: 600, anim: "animate-fade-in-left" },
+    { text: "modelos", isGradient: false, delay: 600, anim: "animate-fade-in-right" },
+    { text: "preditivos", isGradient: true, delay: 700, anim: "animate-fade-in-left" },
+    { text: "de", isGradient: true, delay: 800, anim: "animate-fade-in-right" },
+    { text: "conversão", isGradient: true, delay: 900, anim: "animate-fade-in-left" },
   ];
 
   return (
@@ -31,7 +31,7 @@ const HeroSection = () => {
                 key={index}
                 delay={word.delay}
                 className="inline-block mr-4"
-                animationClassName="animate-fade-in-down"
+                animationClassName={word.anim}
               >
                 <span className={word.isGradient ? "text-wavy-gradient" : ""}>
                   {word.text}
