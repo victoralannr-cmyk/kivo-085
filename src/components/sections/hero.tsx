@@ -51,7 +51,7 @@ const HeroSection = () => {
         <AnimateOnScroll delay={1100} animationClassName="animate-fade-in-down">
           <div className="mt-10">
             <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-[#1A237E] via-[#4285F4] to-[#1A237E] bg-[length:200%_auto] text-white transition-all duration-300 hover:brightness-110 animate-pulse-light">
-              <Link href="#contato">Agendar uma Demonstração</Link>
+              <Link href="https://wa.me/5588982364424" target="_blank" rel="noopener noreferrer">Agendar uma Demonstração</Link>
             </Button>
           </div>
         </AnimateOnScroll>
