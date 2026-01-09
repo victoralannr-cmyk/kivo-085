@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Kivo Digital Surge',
+  title: 'Kivo',
   description: 'Impulsionamos sua empresa para o topo com modelos preditivos de conversão.',
   icons: {
     icon: 'https://i.postimg.cc/9Mx4GF0p/favicon-kivo-(1)-(2).png',
