@@ -18,7 +18,7 @@ const AnimateOnScroll = ({
   animationClassName = 'animate-fade-in-left',
   delay = 0,
   threshold = 0.1,
-  triggerOnce = false,
+  triggerOnce = true,
   ...props
 }: AnimateOnScrollProps) => {
   const [isVisible, setIsVisible] = useState(false);

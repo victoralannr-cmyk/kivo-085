@@ -92,7 +92,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={300}>
+          <AnimateOnScroll delay={300} animationClassName="animate-fade-in-down">
             <div className="flex flex-col items-center gap-4 my-8">
               <div className="bg-card/30 border border-border/20 rounded-lg px-6 py-3">
                 <p className="font-semibold text-foreground">Estratégias de Vendas</p>
@@ -100,7 +100,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={400}>
+          <AnimateOnScroll delay={400} animationClassName="animate-fade-in-down">
             <div className="flex flex-col items-center gap-6 mt-12">
               <FirebaseAnimatedCard />
               <p className="max-w-3xl text-lg text-muted-foreground mt-8">
@@ -109,7 +109,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll delay={100}>
+          <AnimateOnScroll delay={100} animationClassName="animate-fade-in-down">
             <div className="flex flex-col items-center gap-6 mt-16">
               <div className="relative flex h-32 w-full items-center justify-center">
                 <PcMonitorIcon />
@@ -121,7 +121,7 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll delay={100}>
+          <AnimateOnScroll delay={100} animationClassName="animate-fade-in-down">
             <div className="flex flex-col items-center gap-6 mt-16">
               <AnimatedCameraIcon />
               <h3 className="font-headline text-2xl font-bold mt-4">Criação de conteúdo Criativo</h3>
@@ -136,14 +136,14 @@ const FaqSection = () => {
             </div>
           </AnimateOnScroll>
           
-          <AnimateOnScroll>
+          <AnimateOnScroll animationClassName="animate-fade-in-down">
             <h2 className="font-headline text-3xl font-bold sm:text-4xl mt-24">Perguntas Frequentes</h2>
           </AnimateOnScroll>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
-            <AnimateOnScroll key={index} delay={index * 100}>
+            <AnimateOnScroll key={index} delay={index * 100} animationClassName="animate-fade-in-down">
                 <AccordionItem value={`item-${index + 1}`} >
                 <AccordionTrigger className="text-left text-lg hover:no-underline">
                     {item.question}
