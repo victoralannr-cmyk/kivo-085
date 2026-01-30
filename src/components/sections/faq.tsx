@@ -143,7 +143,7 @@ const FaqSection = () => {
 
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, index) => (
-            <AnimateOnScroll key={index} delay={index * 100} animationClassName="animate-fade-in-down">
+            <AnimateOnScroll asChild key={index} delay={index * 100} animationClassName="animate-fade-in-down">
                 <AccordionItem value={`item-${index + 1}`} >
                 <AccordionTrigger className="text-left text-lg hover:no-underline">
                     {item.question}

@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { useEffect, useRef, useState, type ReactNode, type HTMLAttributes } from 'react';
+import { Slot } from '@radix-ui/react-slot';
 
 interface AnimateOnScrollProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -10,6 +11,7 @@ interface AnimateOnScrollProps extends HTMLAttributes<HTMLDivElement> {
   delay?: number;
   threshold?: number;
   triggerOnce?: boolean;
+  asChild?: boolean;
 }
 
 const AnimateOnScroll = ({
@@ -19,6 +21,7 @@ const AnimateOnScroll = ({
   delay = 0,
   threshold = 0.1,
   triggerOnce = true,
+  asChild = false,
   ...props
 }: AnimateOnScrollProps) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,17 +58,21 @@ const AnimateOnScroll = ({
     };
   }, [threshold, triggerOnce]);
 
-  const animationStyle = isVisible ? { animationDelay: `${delay}ms` } : {};
+  const Comp = asChild ? Slot : 'div';
 
   return (
-    <div
+    <Comp
       ref={ref}
-      className={cn(className, 'opacity-0', isVisible && animationClassName)}
-      style={{ ...animationStyle, ...props.style }}
+      className={cn(
+        className,
+        'opacity-0', // Start invisible
+        isVisible && animationClassName
+      )}
+      style={{ animationDelay: `${delay}ms`, ...props.style }}
       {...props}
     >
       {children}
-    </div>
+    </Comp>
   );
 };
 
