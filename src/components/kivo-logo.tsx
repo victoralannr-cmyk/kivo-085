@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const KivoLogo = ({ className }: { className?: string }) => {
   return (
-    <Image
+    <Image 
       src="https://i.postimg.cc/rmswKrtH/Logo-Kivo-4-Sem-Fundo.png"
       alt="Kivo Logo"
       width={40}
