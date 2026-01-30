@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: 'Kivo Agency',
   description: 'Impulsionamos sua empresa para o topo com modelos preditivos de conversão.',
   icons: {
-    icon: 'https://i.postimg.cc/rmswKrtH/Logo-Kivo-4-Sem-Fundo.png',
-    apple: 'https://i.postimg.cc/rmswKrtH/Logo-Kivo-4-Sem-Fundo.png',
-    shortcut: 'https://i.postimg.cc/rmswKrtH/Logo-Kivo-4-Sem-Fundo.png',
+    icon: 'https://i.postimg.cc/jdkf4yTq/favicon-kivo-(1)-(1).png',
+    apple: 'https://i.postimg.cc/jdkf4yTq/favicon-kivo-(1)-(1).png',
+    shortcut: 'https://i.postimg.cc/jdkf4yTq/favicon-kivo-(1)-(1).png',
   },
 };
 
